@@ -33,6 +33,7 @@
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": "off",
     // caso tenha algum aviso na importação do React ou variável/constante
     "no-use-before-define": "off",
     // para que as importações de arquivos .tsx não precise da extensão
