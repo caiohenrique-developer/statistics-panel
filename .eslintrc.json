@@ -8,7 +8,6 @@
     "plugin:react/recommended",
     "airbnb",
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
@@ -17,9 +16,16 @@
       "jsx": true
     },
     "ecmaVersion": 12,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
-  "plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "react-hooks",
+    "prettier",
+    "eslint-plugin-import-helpers"
+  ],
   "rules": {
     // ESlint mostra erro caso as regras do Prettier forem violadas
     "prettier/prettier": "error",
@@ -28,7 +34,7 @@
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "import/prefer-default-export": "off",
     // caso tenha algum aviso na importação do React ou variável/constante
-    // "no-use-before-define": "off",
+    "no-use-before-define": "off",
     // para que as importações de arquivos .tsx não precise da extensão
     "import/extensions": [
       "error",
@@ -37,10 +43,27 @@
         "ts": "never",
         "tsx": "never"
       }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^@api/",
+          "/^react/",
+          "module",
+          "/^@assets/",
+          "/^@components/",
+          "/^@hooks/",
+          "/^@pages/",
+          "/^@styles/",
+          "/^@utils/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
     ]
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
   // para o React entender arquivos Typescript nas importações
   "settings": {
     "import/resolver": {
