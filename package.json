@@ -1,0 +1,54 @@
+{
+  "name": "statistics-panel",
+  "description": "📊 Industry statistics panel",
+  "main": "index.js",
+  "repository": "https://github.com/caiohenrique-developer/statistics-panel.git",
+  "bugs": {
+    "url": "https://github.com/caiohenrique-developer/statistics-panel/issues"
+  },
+  "author": "Caio Henrique <caiohenrique.developer@gmail.com> (https://github.com/caiohenrique-developer)",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "keywords": [],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "commit": "git-cz",
+    "format": "prettier --write './**/*.{tsx,ts}'",
+    "lint": "eslint ./"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./.cz-config.js"
+    }
+  },
+  "dependencies": {
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
+    "commitizen": "^4.2.4",
+    "cz-customizable": "^6.3.0",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.1",
+    "prettier": "^2.3.2"
+  }
+}
