@@ -31,6 +31,15 @@ export default createGlobalStyle`
     })};
   }
 
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Light.otf') format('otf');
+    src: url('/fonts/Gilroy-ExtraBold.otf') format('otf');
+    font-style: normal;
+    font-weight: 400;
+    font-display: fallback; /* <- this can be added to each @font-face definition */
+  }
+
   * {
     border: 0;
     margin: 0;
@@ -62,6 +71,13 @@ export default createGlobalStyle`
 
     body {
       background: var(--dark_212);
+
+      #__next div {
+        color: white;
+        font-weight: 800;
+        font-size: 4rem;
+        padding: 5rem;
+      }
 
       button {
         cursor: pointer;
