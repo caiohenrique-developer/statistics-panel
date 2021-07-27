@@ -4,27 +4,31 @@ import { createGlobalStyle } from 'styled-components';
 export default createGlobalStyle`
   /* Root variables */
   :root {
-    --white:#FFFFFF;
-    --ice_FDF:#FDFDFF;
-    --ice_E9E:#E9E9E9;
-    --ice_EBE:#EBEBEB;
-    --ice_CAC:#CACACA;
-    --gray_979:#979797;
-    --gray_4C4:#4C4C4C;
-    --gray_4D4:#4D4D4D;
-    --dark_282:#282C31;
-    --dark_212:#212427;
+    --PoppinsLight: 300 1rem 'Poppins', sans-serif;
+    --PoppinsRegular: 500 1rem 'Poppins', sans-serif;
+    --PoppinsBold: 600 1rem 'Poppins', sans-serif;
 
-    --pink:#E786D7;
-    --purple:#7F7FD5;
+    --white: #FFFFFF;
+    --ice_FDF: #FDFDFF;
+    --ice_E9E: #E9E9E9;
+    --ice_EBE: #EBEBEB;
+    --ice_CAC: #CACACA;
+    --gray_979: #979797;
+    --gray_4C4: #4C4C4C;
+    --gray_4D4: #4D4D4D;
+    --dark_282: #282C31;
+    --dark_212: #212427;
+
+    --pink: #E786D7;
+    --purple: #7F7FD5;
 
     --purple_half: rgba(135, 128, 213, 0.5);
-    --gradient_purple_pink:   ${linearGradient({
+    --gradient_purple_pink: ${linearGradient({
       colorStops: ['#7F7FD5 0%', '#E786D7 100%'],
       toDirection: 'to right',
       fallback: '#FFF',
     })};
-    --gradient_white:   ${linearGradient({
+    --gradient_white: ${linearGradient({
       colorStops: ['#FFFFFF 100%', '#FFFFFF 0%'],
       toDirection: 'to right',
       fallback: '#FFF',

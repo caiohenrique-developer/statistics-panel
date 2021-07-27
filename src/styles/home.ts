@@ -40,5 +40,12 @@ export const Container = styled.div`
     border-radius: 0.875rem;
     background: var(--dark_212);
     overflow: hidden;
+
+    section {
+      &:last-of-type {
+        width: 100%;
+        padding: 3rem;
+      }
+    }
   }
 `;
