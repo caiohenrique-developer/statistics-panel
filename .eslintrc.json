@@ -50,14 +50,14 @@
       {
         "newlinesBetween": "always",
         "groups": [
-          "/^@api/",
           "/^react/",
+          "/^@api/",
           "module",
-          "/^@assets/",
+          "/^@pages/",
           "/^@components/",
           "/^@hooks/",
-          "/^@pages/",
           "/^@styles/",
+          "/^@assets/",
           "/^@utils/",
           ["parent", "sibling", "index"]
         ],

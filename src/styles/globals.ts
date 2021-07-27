@@ -70,18 +70,17 @@ export default createGlobalStyle`
     }
 
     body {
-      background: var(--dark_212);
+      #__next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-      #__next div {
-        color: white;
-        font-weight: 800;
-        font-size: 4rem;
-        padding: 5rem;
+        height: 100vh;
       }
 
       button {
         cursor: pointer;
-        background: transparent
+        background: transparent;
       }
 
       [disabled] {
