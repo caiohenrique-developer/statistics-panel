@@ -33,8 +33,8 @@ export const Container = styled.div`
 
     max-width: 1280px;
     max-height: 880px;
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
 
     margin: auto;
     border-radius: 0.875rem;
@@ -45,6 +45,12 @@ export const Container = styled.div`
       &:last-of-type {
         width: 100%;
         padding: 3rem;
+
+        .card-detail-container {
+          display: grid;
+          gap: 1.875rem;
+          grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
+        }
       }
     }
   }

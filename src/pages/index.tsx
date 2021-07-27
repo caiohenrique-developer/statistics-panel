@@ -35,7 +35,7 @@ export default function Home(): JSX.Element {
         <section>
           <Header />
 
-          <div>
+          <div className='card-detail-container'>
             <CardDetail assetInfo={assetInfo} />
             <CardDetail assetInfo={assetInfo} />
             <CardDetail assetInfo={assetInfo} />

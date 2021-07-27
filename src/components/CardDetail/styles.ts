@@ -5,7 +5,6 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  width: 21.25rem;
   height: 9.375rem;
 
   background: var(--dark_282);
@@ -29,7 +28,14 @@ export const Container = styled.div`
         font: var(--PoppinsRegular);
 
         &:last-of-type {
+          display: flex;
+          align-items: center;
+
           color: var(--gray_979);
+
+          svg {
+            margin-left: 0.3rem;
+          }
         }
       }
     }
