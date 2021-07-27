@@ -7,8 +7,8 @@ import { Menu } from '@components/Menu';
 
 import { Container } from '@styles/home';
 
-import ShapeBkg from '@assets/icons/shape-bkg.svg';
-import ShapeEllipseBkg from '@assets/icons/shape-ellipse-bkg.svg';
+import ShapeEllipseBkg from '@assets/icons/bkg-shape-ellipse.svg';
+import ShapeBkg from '@assets/icons/bkg-shape.svg';
 
 export default function Home(): JSX.Element {
   return (
