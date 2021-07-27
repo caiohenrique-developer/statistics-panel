@@ -29,6 +29,8 @@ export const Container = styled.div`
   }
 
   main {
+    display: flex;
+
     max-width: 1280px;
     max-height: 880px;
     width: 100%;
@@ -37,5 +39,6 @@ export const Container = styled.div`
     margin: auto;
     border-radius: 0.875rem;
     background: var(--dark_212);
+    overflow: hidden;
   }
 `;
