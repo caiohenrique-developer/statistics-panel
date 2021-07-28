@@ -33,11 +33,23 @@ export default function Home(): JSX.Element {
           <Header />
 
           <div className='card-detail-container'>
-            {assetsApiData.map(({ id, status, healthscore, name }) => {
-              const assetInfo = { id, status, healthscore, name };
+            <div>
+              {assetsApiData.map(({ id, status, healthscore, name }) => {
+                const assetInfo = { id, status, healthscore, name };
 
-              return <CardDetail assetInfo={assetInfo} />;
-            })}
+                return <CardDetail assetInfo={assetInfo} />;
+              })}
+            </div>
+
+            <div className='card-detail-graph'>
+              <p>Gráfico dos status</p>
+
+              <p>
+                <span>assetStatus</span>
+
+                <span>healthscore %</span>
+              </p>
+            </div>
           </div>
         </section>
       </main>
