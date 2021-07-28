@@ -54,7 +54,7 @@ export const Menu = (): JSX.Element => {
               <ViewIcon />
             </button>
           </li>
-          <li>
+          <li className='active'>
             <button type='button'>
               <StatsIcon />
             </button>

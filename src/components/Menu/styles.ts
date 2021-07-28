@@ -22,8 +22,29 @@ export const Container = styled.div`
   }
 
   nav ul li {
+    position: relative;
+
     & + li {
       margin-top: 0.313rem;
+    }
+
+    &.active {
+      &:before {
+        content: '';
+
+        position: absolute;
+        left: -1px;
+
+        width: 0.3rem;
+        height: 100%;
+
+        background: var(--purple);
+        border-radius: 0 5px 5px 0;
+      }
+
+      svg path {
+        fill: var(--purple);
+      }
     }
 
     button {

@@ -49,7 +49,7 @@ export const Container = styled.div`
         .card-detail-container {
           display: grid;
           gap: 1.875rem;
-          grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
         }
       }
     }
