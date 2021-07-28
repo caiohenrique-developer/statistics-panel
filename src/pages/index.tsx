@@ -16,16 +16,6 @@ import ShapeBkg from '@assets/icons/bkg-shape.svg';
 export default function Home(): JSX.Element {
   const { assetsApiData } = useAssets();
 
-  console.log('assetsApiData');
-  console.log(assetsApiData);
-
-  const assetInfo = {
-    id: 1,
-    status: 'inAlert',
-    healthscore: 70,
-    name: 'Motor H13D-1',
-  };
-
   return (
     <Container>
       <Head>
@@ -43,9 +33,11 @@ export default function Home(): JSX.Element {
           <Header />
 
           <div className='card-detail-container'>
-            <CardDetail assetInfo={assetInfo} />
-            <CardDetail assetInfo={assetInfo} />
-            <CardDetail assetInfo={assetInfo} />
+            {assetsApiData.map(({ id, status, healthscore, name }) => {
+              const assetInfo = { id, status, healthscore, name };
+
+              return <CardDetail assetInfo={assetInfo} />;
+            })}
           </div>
         </section>
       </main>
