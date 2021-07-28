@@ -6,12 +6,19 @@ import { CardDetail } from '@components/CardDetail';
 import { Header } from '@components/Header';
 import { Menu } from '@components/Menu';
 
+import { useAssets } from '@hooks/useAssets';
+
 import { Container } from '@styles/home';
 
 import ShapeEllipseBkg from '@assets/icons/bkg-shape-ellipse.svg';
 import ShapeBkg from '@assets/icons/bkg-shape.svg';
 
 export default function Home(): JSX.Element {
+  const { assetsApiData } = useAssets();
+
+  console.log('assetsApiData');
+  console.log(assetsApiData);
+
   const assetInfo = {
     id: 1,
     status: 'inAlert',
