@@ -23,8 +23,7 @@ export const Container = styled.div`
       right: 0;
       bottom: 0;
 
-      max-width: 16.188rem;
-      max-height: 13.063rem;
+      max-width: 8vw;
     }
   }
 
@@ -50,6 +49,24 @@ export const Container = styled.div`
           display: grid;
           gap: 1.875rem;
           grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+
+          padding-right: 0.5rem;
+          max-height: 90%;
+          overflow-y: auto;
+
+          &::-webkit-scrollbar {
+            width: 8px;
+            height: 0;
+          }
+
+          &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: var(--dark_282);
+            border-radius: 5px;
+          }
         }
       }
     }
