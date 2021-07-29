@@ -1,92 +1,61 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
+  .content {
+    > div:first-of-type {
+      display: grid;
+      gap: 1.875rem;
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 
-  width: 100%;
-  height: 100%;
+      margin-bottom: 3rem;
+    }
 
-  main {
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--dark_282);
+      border-radius: 5px;
+    }
+  }
+
+  .card-detail-graph {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    max-width: 1280px;
-    max-height: 880px;
-    width: 95%;
-    height: 95%;
+    height: 15.125rem;
+    background: var(--dark_282);
+    border: 1px solid var(--gray_4D4);
+    border-radius: 0.813rem;
+    padding: 1.5rem;
 
-    margin: auto;
-    border-radius: 0.875rem;
-    background: var(--dark_212);
-    overflow: hidden;
+    p {
+      color: var(--ice_CAC);
+      font-size: 1.25rem;
 
-    section {
+      &:first-of-type {
+        font-weight: 600;
+      }
       &:last-of-type {
-        width: 100%;
-        padding: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-        .card-detail-container {
-          padding-right: 0.5rem;
-          max-height: 90%;
-          overflow-y: auto;
+        span {
+          font: var(--PoppinsRegular);
 
-          > div:first-of-type {
-            display: grid;
-            gap: 1.875rem;
-            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+          &:last-of-type {
+            display: flex;
+            align-items: center;
 
-            margin-bottom: 3rem;
-          }
-
-          &::-webkit-scrollbar {
-            width: 8px;
-            height: 0;
-          }
-
-          &::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-          }
-
-          &::-webkit-scrollbar-thumb {
-            background: var(--dark_282);
-            border-radius: 5px;
-          }
-        }
-
-        .card-detail-graph {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-
-          height: 15.125rem;
-          background: var(--dark_282);
-          border: 1px solid var(--gray_4D4);
-          border-radius: 0.813rem;
-          padding: 1.5rem;
-
-          p {
-            color: var(--ice_CAC);
-            font-size: 1.25rem;
-
-            &:first-of-type {
-              font-weight: 600;
-            }
-            &:last-of-type {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-
-              span {
-                font: var(--PoppinsRegular);
-
-                &:last-of-type {
-                  display: flex;
-                  align-items: center;
-
-                  color: var(--gray_979);
-                }
-              }
-            }
+            color: var(--gray_979);
           }
         }
       }

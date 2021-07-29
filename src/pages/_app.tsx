@@ -5,6 +5,7 @@ import Head from 'next/head';
 
 import { AssetsProvider } from '@hooks/useAssets';
 
+import { Container } from '@styles/general-pages';
 import GlobalStyles from '@styles/globals';
 
 import ShapeEllipseBkg from '@assets/icons/bkg-shape-ellipse.svg';
@@ -20,9 +21,9 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 
       <AssetsProvider>
         <ShapeBkg />
-
-        <Component {...pageProps} />
-
+        <Container>
+          <Component {...pageProps} />
+        </Container>
         <ShapeEllipseBkg />
       </AssetsProvider>
 

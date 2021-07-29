@@ -27,7 +27,7 @@ export default function Home(): JSX.Element {
         <section>
           <Header pageTitle='Estatísticas' />
 
-          <div className='card-detail-container'>
+          <div className='content'>
             <div>
               {assetsApiData.map(({ id, status, healthscore, name }) => {
                 const assetInfo = { id, status, healthscore, name };

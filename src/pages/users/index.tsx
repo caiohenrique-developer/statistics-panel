@@ -7,11 +7,11 @@ import { Menu } from '@components/Menu';
 
 import { Container } from './styles';
 
-export default function Company(): JSX.Element {
+export default function Users(): JSX.Element {
   return (
     <Container>
       <Head>
-        <title>Empresa | Statistics Panel</title>
+        <title>Usuários | Statistics Panel</title>
       </Head>
 
       <main>
@@ -20,7 +20,7 @@ export default function Company(): JSX.Element {
         </section>
 
         <section>
-          <Header pageTitle='Empresa e Unidades' />
+          <Header pageTitle='Usuários' />
 
           <div className='content'>CONTENT</div>
         </section>

@@ -75,6 +75,12 @@ export default createGlobalStyle`
 
     body {
       #__next {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
         height: 100vh;
 
         > svg {
