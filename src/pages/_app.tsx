@@ -7,6 +7,9 @@ import { AssetsProvider } from '@hooks/useAssets';
 
 import GlobalStyles from '@styles/globals';
 
+import ShapeEllipseBkg from '@assets/icons/bkg-shape-ellipse.svg';
+import ShapeBkg from '@assets/icons/bkg-shape.svg';
+
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
@@ -16,7 +19,11 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       </Head>
 
       <AssetsProvider>
+        <ShapeBkg />
+
         <Component {...pageProps} />
+
+        <ShapeEllipseBkg />
       </AssetsProvider>
 
       <GlobalStyles />

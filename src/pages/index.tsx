@@ -10,8 +10,8 @@ import { useAssets } from '@hooks/useAssets';
 
 import { Container } from '@styles/home';
 
-import ShapeEllipseBkg from '@assets/icons/bkg-shape-ellipse.svg';
-import ShapeBkg from '@assets/icons/bkg-shape.svg';
+// import ShapeEllipseBkg from '@assets/icons/bkg-shape-ellipse.svg';
+// import ShapeBkg from '@assets/icons/bkg-shape.svg';
 
 export default function Home(): JSX.Element {
   const { assetsApiData } = useAssets();
@@ -22,7 +22,7 @@ export default function Home(): JSX.Element {
         <title>Home | Statistics Panel</title>
       </Head>
 
-      <ShapeBkg />
+      {/* <ShapeBkg /> */}
 
       <main>
         <section>
@@ -54,7 +54,7 @@ export default function Home(): JSX.Element {
         </section>
       </main>
 
-      <ShapeEllipseBkg />
+      {/* <ShapeEllipseBkg /> */}
     </Container>
   );
 }

@@ -29,8 +29,13 @@ export const Menu = (): JSX.Element => {
 
       <nav>
         <ul>
+          <li className='active'>
+            <button type='button'>
+              <StatsIcon />
+            </button>
+          </li>
           <li>
-            <button type='button' disabled>
+            <button type='button'>
               <HomeIcon />
             </button>
           </li>
@@ -52,11 +57,6 @@ export const Menu = (): JSX.Element => {
           <li>
             <button type='button' disabled>
               <ViewIcon />
-            </button>
-          </li>
-          <li className='active'>
-            <button type='button'>
-              <StatsIcon />
             </button>
           </li>
           <li>

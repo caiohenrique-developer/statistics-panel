@@ -76,6 +76,26 @@ export default createGlobalStyle`
     body {
       #__next {
         height: 100vh;
+
+        > svg {
+          position: absolute;
+
+          &:first-of-type {
+            top: 0;
+            left: 0;
+
+            z-index: -1;
+
+            max-width: 87.75rem;
+            max-height: 53.438rem;
+          }
+          &:last-of-type {
+            right: 0;
+            bottom: 0;
+
+            max-width: 8vw;
+          }
+        }
       }
 
       button {
