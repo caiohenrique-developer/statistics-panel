@@ -31,12 +31,20 @@ export const Menu = (): JSX.Element => {
         <ul>
           <li className='active'>
             <button type='button'>
-              <StatsIcon />
+              <Link href='/'>
+                <a>
+                  <StatsIcon />
+                </a>
+              </Link>
             </button>
           </li>
           <li>
             <button type='button'>
-              <HomeIcon />
+              <Link href='/company'>
+                <a>
+                  <HomeIcon />
+                </a>
+              </Link>
             </button>
           </li>
           <li>
