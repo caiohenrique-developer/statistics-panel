@@ -16,7 +16,7 @@ export const Container = styled.div`
     height: 100%;
   }
 
-  > div main {
+  > div > main {
     display: flex;
 
     section {
@@ -28,7 +28,6 @@ export const Container = styled.div`
           height: 100%;
           max-height: 90%;
           overflow-y: auto;
-          padding-right: 0.5rem;
         }
       }
     }

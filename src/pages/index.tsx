@@ -27,7 +27,7 @@ export default function Home(): JSX.Element {
         <section>
           <Header pageTitle='Estatísticas' />
 
-          <div className='content'>
+          <main className='content'>
             <div>
               {assetsApiData.map(({ id, status, healthscore, name }) => {
                 const assetInfo = { id, status, healthscore, name };
@@ -45,7 +45,7 @@ export default function Home(): JSX.Element {
                 <span>healthscore %</span>
               </p>
             </div>
-          </div>
+          </main>
         </section>
       </main>
     </Container>

@@ -22,7 +22,7 @@ export default function Users(): JSX.Element {
         <section>
           <Header pageTitle='Usuários' />
 
-          <div className='content'>CONTENT</div>
+          <main className='content'>CONTENT</main>
         </section>
       </main>
     </Container>

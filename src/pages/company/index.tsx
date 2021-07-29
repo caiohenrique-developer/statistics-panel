@@ -22,7 +22,7 @@ export default function Company(): JSX.Element {
         <section>
           <Header pageTitle='Empresa e Unidades' />
 
-          <div className='content'>CONTENT</div>
+          <main className='content'>CONTENT</main>
         </section>
       </main>
     </Container>
