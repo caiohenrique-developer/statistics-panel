@@ -10,9 +10,6 @@ import { useAssets } from '@hooks/useAssets';
 
 import { Container } from '@styles/home';
 
-// import ShapeEllipseBkg from '@assets/icons/bkg-shape-ellipse.svg';
-// import ShapeBkg from '@assets/icons/bkg-shape.svg';
-
 export default function Home(): JSX.Element {
   const { assetsApiData } = useAssets();
 
@@ -22,15 +19,13 @@ export default function Home(): JSX.Element {
         <title>Home | Statistics Panel</title>
       </Head>
 
-      {/* <ShapeBkg /> */}
-
       <main>
         <section>
           <Menu />
         </section>
 
         <section>
-          <Header />
+          <Header pageTitle='Estatísticas' />
 
           <div className='card-detail-container'>
             <div>
@@ -53,8 +48,6 @@ export default function Home(): JSX.Element {
           </div>
         </section>
       </main>
-
-      {/* <ShapeEllipseBkg /> */}
     </Container>
   );
 }

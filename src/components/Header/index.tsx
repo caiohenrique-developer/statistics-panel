@@ -2,10 +2,12 @@ import React from 'react';
 
 import { Container } from './styles';
 
-export const Header = (): JSX.Element => {
-  return (
-    <Container>
-      <h1>Estatísticas</h1>
-    </Container>
-  );
+type HeaderProps = {
+  pageTitle: string;
 };
+
+export const Header = ({ pageTitle }: HeaderProps): JSX.Element => (
+  <Container>
+    <h1>{pageTitle}</h1>
+  </Container>
+);
