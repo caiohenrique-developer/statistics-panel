@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  .content {
+  .content > div {
     display: grid;
     gap: 1.875rem;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 
     .user-card {
-      padding: 0 2rem 3rem;
+      padding: 2rem;
       border-radius: 0.625rem;
       border: 1px solid var(--gray_4D4);
 
@@ -17,7 +17,6 @@ export const Container = styled.div`
         flex-direction: column;
 
         color: var(--ice_CAC);
-        margin-top: -2.5rem;
 
         > div {
           border-radius: 50%;

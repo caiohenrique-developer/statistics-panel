@@ -26,6 +26,25 @@ export const Container = styled.div`
 
         .content {
           max-height: 90%;
+          overflow-y: overlay;
+
+          > div {
+            margin-right: 1.5rem;
+          }
+
+          &::-webkit-scrollbar {
+            width: 8px;
+            height: 0;
+          }
+
+          &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: var(--dark_282);
+            border-radius: 5px;
+          }
         }
       }
     }

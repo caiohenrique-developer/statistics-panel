@@ -4,6 +4,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 
 import { AssetsProvider } from '@hooks/useAssets';
+import { UsersProvider } from '@hooks/useUsers';
 
 import { Container } from '@styles/general-pages';
 import GlobalStyles from '@styles/globals';
@@ -20,11 +21,13 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       </Head>
 
       <AssetsProvider>
-        <ShapeBkg />
-        <Container>
-          <Component {...pageProps} />
-        </Container>
-        <ShapeEllipseBkg />
+        <UsersProvider>
+          <ShapeBkg />
+          <Container>
+            <Component {...pageProps} />
+          </Container>
+          <ShapeEllipseBkg />
+        </UsersProvider>
       </AssetsProvider>
 
       <GlobalStyles />

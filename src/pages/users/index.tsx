@@ -6,9 +6,13 @@ import Image from 'next/image';
 import { Header } from '@components/Header';
 import { Menu } from '@components/Menu';
 
+import { useUsers } from '@hooks/useUsers';
+
 import { Container } from './styles';
 
 export default function Users(): JSX.Element {
+  const { usersApiData } = useUsers();
+
   return (
     <Container>
       <Head>
@@ -24,41 +28,33 @@ export default function Users(): JSX.Element {
           <Header pageTitle='Usuários' />
 
           <main className='content'>
-            <div className='user-card'>
-              <div>
-                <Image
-                  src='https://i.pravatar.cc/300'
-                  alt='Foto do usuário'
-                  width={88}
-                  height={88}
-                />
+            <div>
+              {usersApiData.map(({ id, name, email, unitId, companyId }) => {
+                const srcAvatarSize = (Math.random() * 2.5)
+                  .toFixed(2)
+                  .replace('.', '');
 
-                <h3>Lorem Ipsun</h3>
+                return (
+                  <div key={id} className='user-card'>
+                    <div>
+                      <Image
+                        src={`https://i.pravatar.cc/${srcAvatarSize}`}
+                        alt='Foto do usuário'
+                        width={88}
+                        height={88}
+                      />
 
-                <p>testando@teste.com.br</p>
+                      <h3>{name}</h3>
 
-                <span>
-                  <strong>Unidade</strong> | Empresa
-                </span>
-              </div>
-            </div>
-            <div className='user-card'>
-              <div>
-                <Image
-                  src='https://i.pravatar.cc/150'
-                  alt='Foto do usuário'
-                  width={88}
-                  height={88}
-                />
+                      <p>{email}</p>
 
-                <h3>Lorem Ipsun</h3>
-
-                <p>testando@teste.com.br</p>
-
-                <span>
-                  <strong>Unidade</strong> | Empresa
-                </span>
-              </div>
+                      <span>
+                        <strong>{unitId}</strong> | {companyId}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </main>
         </section>

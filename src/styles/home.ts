@@ -2,29 +2,12 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   .content {
-    padding-right: 0.5rem;
-    overflow-y: auto;
-
     > div:first-of-type {
       display: grid;
       gap: 1.875rem;
       grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 
       margin-bottom: 3rem;
-    }
-
-    &::-webkit-scrollbar {
-      width: 8px;
-      height: 0;
-    }
-
-    &::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: var(--dark_282);
-      border-radius: 5px;
     }
 
     .card-detail-graph {

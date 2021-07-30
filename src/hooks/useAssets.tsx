@@ -8,25 +8,7 @@ import React, {
 
 import { fetchAssets } from '@pages/api';
 
-type FetchAssetsProps = {
-  id: number;
-  sensors: string[];
-  model: string;
-  status: string;
-  healthscore: number;
-  name: string;
-  image: string;
-  specifications: {
-    maxTemp: number;
-  };
-  metrics: {
-    totalCollectsUptime: number;
-    totalUptime: number;
-    lastUptimeAt: string;
-  };
-  unitId: number;
-  companyId: number;
-};
+import { FetchAssetsProps } from '@utils/types/api';
 
 type CtxValProps = {
   assetsApiData: FetchAssetsProps[];
