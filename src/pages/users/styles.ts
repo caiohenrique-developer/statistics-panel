@@ -7,13 +7,12 @@ export const Container = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 
     .user-card {
-      height: 8rem;
-      padding: 1.25rem;
-      border: 1px solid var(--gray_4D4);
+      padding: 0 2rem 1.25rem;
       border-radius: 0.625rem;
+      border: 1px solid var(--gray_4D4);
 
       div {
-        top: -50px;
+        top: -40px;
         left: 50%;
         transform: translateX(-50%);
 

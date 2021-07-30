@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   .content {
     padding-right: 0.5rem;
+    overflow-y: auto;
 
     > div:first-of-type {
       display: grid;

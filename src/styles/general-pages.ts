@@ -12,7 +12,7 @@ export const Container = styled.div`
   overflow: hidden;
 
   > div,
-  > div main {
+  > div > main {
     height: 100%;
   }
 
@@ -25,9 +25,7 @@ export const Container = styled.div`
         padding: 3rem;
 
         .content {
-          height: 100%;
           max-height: 90%;
-          overflow-y: auto;
         }
       }
     }
