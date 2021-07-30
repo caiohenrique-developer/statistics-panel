@@ -25,22 +25,40 @@ export default function Users(): JSX.Element {
 
           <main className='content'>
             <div className='user-card'>
-              <Image
-                src='https://i.pravatar.cc/300'
-                alt='Foto do usuário'
-                width={88}
-                height={88}
-              />
-              <h3>Nome</h3>
+              <div>
+                <Image
+                  src='https://i.pravatar.cc/300'
+                  alt='Foto do usuário'
+                  width={88}
+                  height={88}
+                />
+
+                <h3>Lorem Ipsun</h3>
+
+                <p>testando@teste.com.br</p>
+
+                <span>
+                  <strong>Unidade</strong> | Empresa
+                </span>
+              </div>
             </div>
             <div className='user-card'>
-              <Image
-                src='https://i.pravatar.cc/300'
-                alt='Foto do usuário'
-                width={88}
-                height={88}
-              />
-              <h3>Nome</h3>
+              <div>
+                <Image
+                  src='https://i.pravatar.cc/150'
+                  alt='Foto do usuário'
+                  width={88}
+                  height={88}
+                />
+
+                <h3>Lorem Ipsun</h3>
+
+                <p>testando@teste.com.br</p>
+
+                <span>
+                  <strong>Unidade</strong> | Empresa
+                </span>
+              </div>
             </div>
           </main>
         </section>
