@@ -27,3 +27,16 @@ export type FetchUsersProps = {
   unitId: number;
   companyId: number;
 };
+
+// fetchUnits
+export type FetchUnitsProps = {
+  id: number;
+  name: string;
+  companyId: number;
+};
+
+// fetchCompanies
+export type FetchCompaniesProps = {
+  id: number;
+  name: string;
+};

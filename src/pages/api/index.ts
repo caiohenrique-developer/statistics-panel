@@ -1,6 +1,11 @@
 import axios from 'axios';
 
-import { FetchAssetsProps, FetchUsersProps } from '@utils/types/api';
+import {
+  FetchAssetsProps,
+  FetchUsersProps,
+  FetchUnitsProps,
+  FetchCompaniesProps,
+} from '@utils/types/api';
 
 const { tracApi, hostEnv } = {
   tracApi: axios.create({
@@ -34,7 +39,65 @@ const fetchUsers = async (): Promise<FetchUsersProps[]> => {
   try {
     const { data: user } = await tracApi.get('users');
 
+    const fetchRes = await axios.all([
+      tracApi.get('users'),
+      tracApi.get('units'),
+      tracApi.get('companies'),
+    ]);
+
+    const { data: fetchUser } = fetchRes[0];
+    const { data: fetchUnity } = fetchRes[1];
+    const { data: fetchCompany } = fetchRes[2];
+
+    fetchUser.map(
+      ({
+        id: userID,
+        name: userName,
+        email: userEmail,
+        unitId: userUnityID,
+        companyId: userCompanyID,
+      }) => {
+        const unity = fetchUnity
+          .filter(({ id: unityID }) => userUnityID === unityID)
+          .map(({ name: unityName }) => unityName);
+
+        const company = fetchCompany
+          .filter(({ id: companyID }) => userCompanyID === companyID)
+          .map(({ name: companyName }) => companyName);
+
+        console.log(userID, userName, userEmail, unity, company);
+
+        return {
+          userID,
+          userName,
+          userEmail,
+          userUnityID,
+          userCompanyID,
+        };
+      },
+    );
+
     return user;
+  } catch (err) {
+    throw new Error(err);
+  }
+};
+
+const fetchUnits = async (): Promise<FetchUnitsProps[]> => {
+  try {
+    const { data: unity } = await tracApi.get('units');
+
+    return unity;
+  } catch (err) {
+    throw new Error(err);
+  }
+};
+
+const fetchCompanies = async (): Promise<FetchCompaniesProps[]> => {
+  try {
+    const { data: company } = await tracApi.get('companies');
+
+    return company;
   } catch (err) {
     throw new Error(err);
   }
@@ -52,4 +115,6 @@ export {
   // api requests
   fetchAssets,
   fetchUsers,
+  fetchUnits,
+  fetchCompanies,
 };
