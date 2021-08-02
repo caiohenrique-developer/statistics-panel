@@ -21,11 +21,11 @@ export type FetchAssetsProps = {
 
 // fetchUsers
 export type FetchUsersProps = {
-  id: number;
-  email: string;
-  name: string;
-  unitId: number;
-  companyId: number;
+  userID: number;
+  userEmail: string;
+  userName: string;
+  unity: number;
+  company: number;
 };
 
 // fetchUnits

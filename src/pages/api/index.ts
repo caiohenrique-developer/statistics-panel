@@ -37,8 +37,6 @@ const fetchAssets = async (): Promise<FetchAssetsProps[]> => {
 
 const fetchUsers = async (): Promise<FetchUsersProps[]> => {
   try {
-    const { data: user } = await tracApi.get('users');
-
     const fetchRes = await axios.all([
       tracApi.get('users'),
       tracApi.get('units'),
@@ -49,7 +47,7 @@ const fetchUsers = async (): Promise<FetchUsersProps[]> => {
     const { data: fetchUnity } = fetchRes[1];
     const { data: fetchCompany } = fetchRes[2];
 
-    fetchUser.map(
+    const user = fetchUser.map(
       ({
         id: userID,
         name: userName,
@@ -57,22 +55,20 @@ const fetchUsers = async (): Promise<FetchUsersProps[]> => {
         unitId: userUnityID,
         companyId: userCompanyID,
       }) => {
-        const unity = fetchUnity
+        const { name: unity } = fetchUnity
           .filter(({ id: unityID }) => userUnityID === unityID)
-          .map(({ name: unityName }) => unityName);
+          .find(({ name: unityName }) => unityName);
 
-        const company = fetchCompany
+        const { name: company } = fetchCompany
           .filter(({ id: companyID }) => userCompanyID === companyID)
-          .map(({ name: companyName }) => companyName);
-
-        console.log(userID, userName, userEmail, unity, company);
+          .find(({ name: companyName }) => companyName);
 
         return {
+          unity,
           userID,
+          company,
           userName,
           userEmail,
-          userUnityID,
-          userCompanyID,
         };
       },
     );

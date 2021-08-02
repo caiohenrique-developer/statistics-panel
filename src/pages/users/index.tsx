@@ -29,32 +29,35 @@ export default function Users(): JSX.Element {
 
           <main className='content'>
             <div>
-              {usersApiData.map(({ id, name, email, unitId, companyId }) => {
-                const srcAvatarSize = (Math.random() * 2.5)
-                  .toFixed(2)
-                  .replace('.', '');
+              {usersApiData.map(
+                ({ unity, userID, company, userName, userEmail }) => {
+                  const srcAvatarSize = (Math.random() * 2.5)
+                    .toFixed(2)
+                    .replace('.', '');
 
-                return (
-                  <div key={id} className='user-card'>
-                    <div>
-                      <Image
-                        src={`https://i.pravatar.cc/${srcAvatarSize}`}
-                        alt='Foto do usuário'
-                        width={88}
-                        height={88}
-                      />
+                  return (
+                    <div key={userID} className='user-card'>
+                      <div>
+                        <Image
+                          src={`https://i.pravatar.cc/${srcAvatarSize}`}
+                          alt='Foto do usuário'
+                          width={88}
+                          height={88}
+                        />
 
-                      <h3>{name}</h3>
+                        <h3>{userName || 'Nome'}</h3>
 
-                      <p>{email}</p>
+                        <p>{userEmail || 'E-mail'}</p>
 
-                      <span>
-                        <strong>{unitId}</strong> | {companyId}
-                      </span>
+                        <span>
+                          <strong>{unity || 'Unidade'}</strong> |{' '}
+                          {company || 'Empresa'}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                },
+              )}
             </div>
           </main>
         </section>
