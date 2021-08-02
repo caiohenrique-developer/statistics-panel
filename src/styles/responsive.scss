@@ -33,6 +33,20 @@
           }
         }
       }
+
+      #users {
+        .user-card {
+          > div {
+            h3 {
+              margin-top: 0.625rem auto 0.313rem;
+            }
+
+            span {
+              margin-top: 0.625rem;
+            }
+          }
+        }
+      }
     }
   }
 }
