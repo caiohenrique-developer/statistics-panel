@@ -17,15 +17,20 @@
           // content
           &:last-of-type {
             padding: 1.5rem;
+
+            // header
+            > div {
+              margin-bottom: 1.5rem;
+            }
+
+            .content {
+              div:first-of-type {
+                gap: 1rem;
+              }
+            }
           }
         }
       }
-
-      #home {}
-
-      #company {}
-
-      #users {}
     }
   }
 }
