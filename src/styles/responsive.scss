@@ -24,7 +24,9 @@
             }
 
             .content {
-              div:first-of-type {
+              max-height: 92%;
+
+              > div:first-of-type {
                 gap: 1rem;
               }
             }
