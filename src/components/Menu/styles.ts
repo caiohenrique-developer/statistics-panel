@@ -9,7 +9,7 @@ export const Container = styled.div`
   height: 100%;
 
   background: var(--dark_282);
-  border: 1px solid var(--gray_4D4);
+  border-right: 1px solid var(--gray_4D4);
   padding: 3rem 0;
 
   > a,
@@ -17,12 +17,16 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
 
-    height: 3rem;
+  > a {
+    height: 2rem;
   }
 
   nav ul li {
     position: relative;
+
+    height: 3rem;
 
     & + li {
       margin-top: 0.313rem;
