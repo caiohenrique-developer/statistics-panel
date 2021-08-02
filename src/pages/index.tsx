@@ -8,7 +8,7 @@ import { Menu } from '@components/Menu';
 
 import { useAssets } from '@hooks/useAssets';
 
-import { Container } from '@styles/home';
+import { Container } from '@styles/home-page';
 
 export default function Home(): JSX.Element {
   const { assetsApiData } = useAssets();
