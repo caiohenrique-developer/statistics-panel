@@ -1,7 +1,9 @@
 import React from 'react';
+import MediaQuery from 'react-responsive';
 
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import { AssetsProvider } from '@hooks/useAssets';
 import { UsersProvider } from '@hooks/useUsers';
@@ -14,6 +16,10 @@ import ShapeEllipseBkg from '@assets/icons/bkg-shape-ellipse.svg';
 import ShapeBkg from '@assets/icons/bkg-shape.svg';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  const { pathname: pathUrl } = useRouter();
+
+  const pageName = pathUrl === '/' ? 'home' : pathUrl.replace('/', '');
+
   return (
     <>
       <Head>
@@ -23,11 +29,15 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 
       <AssetsProvider>
         <UsersProvider>
-          <ShapeBkg />
-          <Container>
+          <MediaQuery minDeviceWidth={767}>
+            <ShapeBkg />
+          </MediaQuery>
+          <Container id={pageName}>
             <Component {...pageProps} />
           </Container>
-          <ShapeEllipseBkg />
+          <MediaQuery minDeviceWidth={767}>
+            <ShapeEllipseBkg />
+          </MediaQuery>
         </UsersProvider>
       </AssetsProvider>
 
