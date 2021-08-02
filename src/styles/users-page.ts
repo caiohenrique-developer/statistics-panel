@@ -38,23 +38,28 @@ export const Container = styled.div`
           flex-direction: column;
           align-items: center;
 
+          font: var(--PoppinsLight);
           font-size: 0.875rem;
           color: var(--ice_EBE);
 
           margin: 1rem auto 0;
-          padding: 0.4rem 0.85rem;
+          padding: 0.4rem 1.5rem;
           background: var(--gray_4C4);
           border-radius: 0.525rem;
 
-          strong:after {
-            content: '';
+          strong {
+            font: var(--PoppinsBold);
 
-            display: block;
-            width: 90%;
-            height: 1px;
+            &:after {
+              content: '';
 
-            background: var(--ice_EBE);
-            margin: 0.125rem auto;
+              display: block;
+              width: 90%;
+              height: 1px;
+
+              background: var(--ice_EBE);
+              margin: 0.125rem auto;
+            }
           }
         }
       }
