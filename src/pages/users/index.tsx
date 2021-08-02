@@ -50,7 +50,7 @@ export default function Users(): JSX.Element {
                         <p>{userEmail || 'E-mail'}</p>
 
                         <span>
-                          <strong>{unity || 'Unidade'}</strong> |{' '}
+                          <strong>{unity || 'Unidade'}</strong>
                           {company || 'Empresa'}
                         </span>
                       </div>
