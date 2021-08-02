@@ -6,6 +6,7 @@ import Head from 'next/head';
 import { AssetsProvider } from '@hooks/useAssets';
 import { UsersProvider } from '@hooks/useUsers';
 
+import '@styles/responsive.scss';
 import { Container } from '@styles/general-pages';
 import GlobalStyles from '@styles/globals';
 

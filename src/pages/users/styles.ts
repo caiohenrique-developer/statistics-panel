@@ -41,7 +41,7 @@ export const Container = styled.div`
           font-size: 0.875rem;
           color: var(--ice_EBE);
 
-          margin: 1rem auto;
+          margin: 1rem auto 0;
           padding: 0.4rem 0.85rem;
           background: var(--gray_4C4);
           border-radius: 0.525rem;
