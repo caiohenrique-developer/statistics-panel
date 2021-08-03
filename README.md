@@ -103,6 +103,12 @@ $ yarn dev
 
 </details>
 
+<br>
+
+<p align="center">
+  <img alt="Statistics Panel background image" src="./public/images/statistics-panel-theme.png" width="700" />
+</p>
+
 ## [🔝](#top) Badges :bookmark:
 
 <p align="center">
