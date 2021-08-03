@@ -34,7 +34,7 @@
 - Any suggestion?
   - <a href="#-contact-me-phone">Contact me!</a>
 
-## [🔝](#top) Techs :flying_saucer:
+## [🔝](#top) Techs :flying_saucer: 👌
 
 <table>
   <tr align="center">
@@ -43,20 +43,32 @@
   </tr>
 
   <tr align="center">
-    <td><a href="https://vercel.com/solutions/nextjs">Next.js</a></td>
+    <td><a href="https://axios-http.com/">Axios</a></td>
     <td><a href="https://github.com/conventional-changelog/commitlint">Commitlint</a></td>
   </tr>
   <tr align="center">
-    <td><a href="https://reactjs.org/">ReactJS</a></td>
+    <td><a href="https://vercel.com/solutions/nextjs">Next.js</a></td>
     <td><a href="https://github.com/commitizen/cz-cli">Commitizen</a></td>
   </tr>
   <tr align="center">
-    <td><a href="https://styled-components.com/">Styled-components</a></td>
-    <td><a href="https://github.com/typicode/husky">Husky</a></td>
+    <td><a href="https://polished.js.org/">Polished</a></td>
+    <td><a href="https://github.com/leoforfree/cz-customizable">CZ-customizable</a></td>
   </tr>
   <tr align="center">
-    <td><a href="#"></a></td>
+    <td><a href="https://reactjs.org/">React.js</a></td>
+    <td><a href="https://editorconfig.org/">EditorConfig</a></td>
+  </tr>
+  <tr align="center">
+    <td><a href="https://github.com/contra/react-responsive">React-responsive</a></td>
     <td><a href="https://eslint.org/">ESLint</a></td>
+  </tr>
+  <tr align="center">
+    <td><a href="https://styled-components.com/">Styled-components</a></td>
+    <td><a href="https://github.com/Tibfib/eslint-plugin-import-helpers">Eslint-plugin-import-helpers</a></td>
+  </tr>
+  <tr align="center">
+    <td><a href="https://vercel.com/">Vercel</a></td>
+    <td><a href="https://github.com/typicode/husky">Husky</a></td>
   </tr>
   <tr align="center">
     <td><a href="#"></a></td>
@@ -64,7 +76,11 @@
   </tr>
   <tr align="center">
     <td><a href="#"></a></td>
-    <td><a href="https://editorconfig.org/">EditorConfig</a></td>
+    <td><a href="https://github.com/sass/dart-sass">Sass</a></td>
+  </tr>
+  <tr align="center">
+    <td><a href="#"></a></td>
+    <td><a href="https://react-svgr.com/">SVGR</a></td>
   </tr>
   <tr align="center">
     <td><a href="#"></a></td>
@@ -72,12 +88,12 @@
   </tr>
 </table>
 
-## [🔝](#top) Prerequisites :warning:
+## [🔝](#top) Prerequisites :warning: 👌
 
-In order to use and test this project locally, you should've already setup the development environment. <br>
+In order to use and test this project locally, you should've already set up the development environment. <br>
 _Or go to [**statistics-panel.vercel.app**](https://statistics-panel.vercel.app/) to see the project in a production environment._
 
-## [🔝](#top) How To Use :grey_question:
+## [🔝](#top) How To Use :grey_question: 👌
 
 To clone and run this application locally, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [Yarn v1.13][yarn] or higher installed on your computer.
 
@@ -88,15 +104,17 @@ _From your `command line` follow these steps..._
 
 ```bash
 # Clone the project
-$ git clone https://github.com/caiohenrique-developer/statistics-panel.git 'statistics-panel' && cd 'statistics-panel'
+$ git clone https://github.com/caiohenrique-developer/statistics-panel.git 'Statistics-Panel' && cd 'Statistics-Panel'
 
-# Install dependencies
+# Install packages
 $ yarn
 # or
 $ npm i
 
 # Start the project
 $ yarn dev
+
+# You'll be able to see the URL http://localhost:{port} on your command line, so open them!
 
 # Very well, now you can enjoy this project! ;)
 ```
