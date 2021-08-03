@@ -1,4 +1,4 @@
-### <a name="top"></a> 👌
+### <a name="top"></a>
 
 <h1 align="center">
   <a href="https://statistics-panel.vercel.app/" target="_blank">
@@ -34,7 +34,7 @@
 - Any suggestion?
   - <a href="#-contact-me-phone">Contact me!</a>
 
-## [🔝](#top) Techs :flying_saucer: 👌
+## [🔝](#top) Techs :flying_saucer:
 
 <table>
   <tr align="center">
@@ -88,12 +88,12 @@
   </tr>
 </table>
 
-## [🔝](#top) Prerequisites :warning: 👌
+## [🔝](#top) Prerequisites :warning:
 
 In order to use and test this project locally, you should've already set up the development environment. <br>
 _Or go to [**statistics-panel.vercel.app**](https://statistics-panel.vercel.app/) to see the project in a production environment._
 
-## [🔝](#top) How To Use :grey_question: 👌
+## [🔝](#top) How To Use :grey_question:
 
 To clone and run this application locally, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [Yarn v1.13][yarn] or higher installed on your computer.
 
@@ -169,7 +169,7 @@ $ yarn dev
   <img alt="NextJS" src="https://img.shields.io/badge/next.js-000000?style=flat&logo=next.js&logoColor=white"/>
 </p>
 
-## [🔝](#top) License :closed_lock_with_key: 👌
+## [🔝](#top) License :closed_lock_with_key:
 
 Copyright © 2021 Statistics Panel, [MIT](https://github.com/caiohenrique-developer/statistics-panel/blob/master/LICENSE) .
 
@@ -179,7 +179,7 @@ Copyright © 2021 Statistics Panel, [MIT](https://github.com/caiohenrique-develo
 
 <blockquote align="center">“Always running in search of the goals!” <br> Done with ♥ by myself 👇 <a href="#-contact-me-phone">Get in touch!</a></blockquote>
 
-## [🔝](#top) Contact Me :phone: 👌
+## [🔝](#top) Contact Me :phone:
 
 <p align="left">
   <img align="left" alt="Profile Avatar" src="./public/professional.png" width="80" />
