@@ -15,7 +15,7 @@ import { Container } from '../../styles/company-page';
 export default function Company(): JSX.Element {
   const { unitsApiData } = useUnits();
 
-  const companyName = unitsApiData[0].company;
+  const companyName = unitsApiData[0]?.company;
 
   return (
     <Container>

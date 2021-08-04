@@ -34,7 +34,11 @@
         }
       }
 
-      #company {
+      #company .content > div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
         .banner > div {
           height: 9.375rem;
         }
