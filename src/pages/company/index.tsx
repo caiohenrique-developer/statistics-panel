@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { Header } from '@components/Header';
 import { Menu } from '@components/Menu';
 
+import HomeIcon from '@assets/icons/icon-home.svg';
+
 import { Container } from '../../styles/company-page';
 
 export default function Company(): JSX.Element {
@@ -35,6 +37,23 @@ export default function Company(): JSX.Element {
               </div>
 
               <h2>Unidades</h2>
+
+              <div className='unity-card'>
+                <div>
+                  <HomeIcon />
+
+                  <h3>Nome</h3>
+
+                  <p>Empresa</p>
+                </div>
+                <div>
+                  <HomeIcon />
+
+                  <h3>Nome</h3>
+
+                  <p>Empresa</p>
+                </div>
+              </div>
             </div>
           </main>
         </section>
