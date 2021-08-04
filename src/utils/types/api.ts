@@ -30,13 +30,7 @@ export type FetchUsersProps = {
 
 // fetchUnits
 export type FetchUnitsProps = {
-  id: number;
-  name: string;
-  companyId: number;
-};
-
-// fetchCompanies
-export type FetchCompaniesProps = {
-  id: number;
-  name: string;
+  unityCompanyID: number;
+  company: string;
+  unityName: string;
 };

@@ -6,11 +6,17 @@ import Image from 'next/image';
 import { Header } from '@components/Header';
 import { Menu } from '@components/Menu';
 
+import { useUnits } from '@hooks/useUnits';
+
 import HomeIcon from '@assets/icons/icon-home.svg';
 
 import { Container } from '../../styles/company-page';
 
 export default function Company(): JSX.Element {
+  const { unitsApiData } = useUnits();
+
+  const companyName = unitsApiData[0].company;
+
   return (
     <Container>
       <Head>
@@ -33,26 +39,21 @@ export default function Company(): JSX.Element {
                   width={1200}
                   height={200}
                 />
-                <h2>Empresa</h2>
+                <h2>{companyName}</h2>
               </div>
 
               <h2>Unidades</h2>
 
               <div className='unity-card'>
-                <div>
-                  <HomeIcon />
+                {unitsApiData.map(({ company, unityName }) => (
+                  <div>
+                    <HomeIcon />
 
-                  <h3>Nome</h3>
+                    <h3>{unityName}</h3>
 
-                  <p>Empresa</p>
-                </div>
-                <div>
-                  <HomeIcon />
-
-                  <h3>Nome</h3>
-
-                  <p>Empresa</p>
-                </div>
+                    <p>{company}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </main>

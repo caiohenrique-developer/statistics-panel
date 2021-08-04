@@ -4,7 +4,6 @@ import {
   FetchAssetsProps,
   FetchUsersProps,
   FetchUnitsProps,
-  FetchCompaniesProps,
 } from '@utils/types/api';
 
 const { tracApi, hostEnv } = {
@@ -81,19 +80,29 @@ const fetchUsers = async (): Promise<FetchUsersProps[]> => {
 
 const fetchUnits = async (): Promise<FetchUnitsProps[]> => {
   try {
-    const { data: unity } = await tracApi.get('units');
+    const fetchRes = await axios.all([
+      tracApi.get('units'),
+      tracApi.get('companies'),
+    ]);
+
+    const { data: fetchUnity } = fetchRes[0];
+    const { data: fetchCompany } = fetchRes[1];
+
+    const unity = fetchUnity.map(
+      ({ id: unityID, name: unityName, companyId: unityCompanyID }) => {
+        const { name: company } = fetchCompany
+          .filter(({ id: companyID }) => unityCompanyID === companyID)
+          .find(({ name: companyName }) => companyName);
+
+        return {
+          unityID,
+          unityName,
+          company,
+        };
+      },
+    );
 
     return unity;
-  } catch (err) {
-    throw new Error(err);
-  }
-};
-
-const fetchCompanies = async (): Promise<FetchCompaniesProps[]> => {
-  try {
-    const { data: company } = await tracApi.get('companies');
-
-    return company;
   } catch (err) {
     throw new Error(err);
   }
@@ -112,5 +121,4 @@ export {
   fetchAssets,
   fetchUsers,
   fetchUnits,
-  fetchCompanies,
 };

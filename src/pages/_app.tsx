@@ -6,6 +6,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import { AssetsProvider } from '@hooks/useAssets';
+import { UnitsProvider } from '@hooks/useUnits';
 import { UsersProvider } from '@hooks/useUsers';
 
 import '@styles/responsive.scss';
@@ -29,15 +30,17 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 
       <AssetsProvider>
         <UsersProvider>
-          <MediaQuery minDeviceWidth={767}>
-            <ShapeBkg />
-          </MediaQuery>
-          <Container id={pageName}>
-            <Component {...pageProps} />
-          </Container>
-          <MediaQuery minDeviceWidth={767}>
-            <ShapeEllipseBkg />
-          </MediaQuery>
+          <UnitsProvider>
+            <MediaQuery minDeviceWidth={767}>
+              <ShapeBkg />
+            </MediaQuery>
+            <Container id={pageName}>
+              <Component {...pageProps} />
+            </Container>
+            <MediaQuery minDeviceWidth={767}>
+              <ShapeEllipseBkg />
+            </MediaQuery>
+          </UnitsProvider>
         </UsersProvider>
       </AssetsProvider>
 
