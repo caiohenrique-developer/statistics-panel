@@ -50,9 +50,13 @@ export const Menu = (): JSX.Element => {
               </Link>
             </button>
           </li>
-          <li>
-            <button type='button' disabled>
-              <ContentIcon />
+          <li className={`${pathUrl === '/assets' ? 'active' : ''}`}>
+            <button type='button'>
+              <Link href='/assets'>
+                <a>
+                  <ContentIcon />
+                </a>
+              </Link>
             </button>
           </li>
           <li className={`${pathUrl === '/users' ? 'active' : ''}`}>

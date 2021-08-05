@@ -9,6 +9,6 @@ module.exports = {
     return config;
   },
   images: {
-    domains: ['i.pravatar.cc'],
+    domains: ['i.pravatar.cc', 'tractian-img.s3.amazonaws.com'],
   },
 };

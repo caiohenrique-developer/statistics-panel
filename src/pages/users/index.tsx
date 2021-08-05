@@ -8,7 +8,7 @@ import { Menu } from '@components/Menu';
 
 import { useUsers } from '@hooks/useUsers';
 
-import { Container } from '../../styles/users-page';
+import { Container } from '@styles/users-page';
 
 export default function Users(): JSX.Element {
   const { usersApiData } = useUsers();

@@ -8,9 +8,9 @@ import { Menu } from '@components/Menu';
 
 import { useUnits } from '@hooks/useUnits';
 
-import HomeIcon from '@assets/icons/icon-home.svg';
+import { Container } from '@styles/company-page';
 
-import { Container } from '../../styles/company-page';
+import HomeIcon from '@assets/icons/icon-home.svg';
 
 export default function Company(): JSX.Element {
   const { unitsApiData } = useUnits();
