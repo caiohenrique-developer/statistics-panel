@@ -31,7 +31,6 @@ export default function Assets(): JSX.Element {
             <div>
               {assetsApiData.map(
                 ({
-                  companyId,
                   healthscore,
                   id,
                   image,
@@ -41,8 +40,16 @@ export default function Assets(): JSX.Element {
                   sensors,
                   specifications: { maxTemp },
                   status,
-                  unitId,
+                  unity,
+                  company,
                 }) => {
+                  const assetStatus =
+                    status === 'inAlert'
+                      ? 'Em Alerta'
+                      : status === 'inOperation'
+                      ? 'Em Operação'
+                      : 'Em Parada';
+
                   return (
                     <div key={id} className='assety-card'>
                       <div>
@@ -87,13 +94,13 @@ export default function Assets(): JSX.Element {
                             <p>Temperatura Máxima em Celsius: {maxTemp}</p>
                           </li>
                           <li>
-                            <p>Estado atual: {status}</p>
+                            <p>Estado atual: {assetStatus}</p>
                           </li>
                           <li>
-                            <p>Unidade: {unitId}</p>
+                            <p>Unidade: {unity}</p>
                           </li>
                           <li>
-                            <p>Empresa: {companyId}</p>
+                            <p>Empresa: {company}</p>
                           </li>
                         </ul>
                       </div>

@@ -26,7 +26,33 @@ const companies = 'companies';
 
 const fetchAssets = async (): Promise<FetchAssetsProps[]> => {
   try {
-    const { data: asset } = await tracApi.get('assets');
+    const fetchRes = await axios.all([
+      tracApi.get('assets'),
+      tracApi.get('units'),
+      tracApi.get('companies'),
+    ]);
+
+    const { data: fetchAsset } = fetchRes[0];
+    const { data: fetchUnity } = fetchRes[1];
+    const { data: fetchCompany } = fetchRes[2];
+
+    const asset: FetchAssetsProps[] = fetchAsset.map(
+      ({ unitId: assetUnityID, companyId: assetCompanyID, ...rest }) => {
+        const { name: unity } = fetchUnity
+          .filter(({ id: unityID }) => assetUnityID === unityID)
+          .find(({ name: unityName }) => unityName);
+
+        const { name: company } = fetchCompany
+          .filter(({ id: companyID }) => assetCompanyID === companyID)
+          .find(({ name: companyName }) => companyName);
+
+        return {
+          unity,
+          company,
+          ...rest,
+        };
+      },
+    );
 
     return asset;
   } catch (err) {

@@ -15,8 +15,8 @@ export type FetchAssetsProps = {
     totalUptime: number;
     lastUptimeAt: string;
   };
-  unitId: number;
-  companyId: number;
+  unity: string;
+  company: string;
 };
 
 // fetchUsers
@@ -24,8 +24,8 @@ export type FetchUsersProps = {
   userID: number;
   userEmail: string;
   userName: string;
-  unity: number;
-  company: number;
+  unity: string;
+  company: string;
 };
 
 // fetchUnits
