@@ -72,7 +72,7 @@ const fetchUsers = async (): Promise<FetchUsersProps[]> => {
     const { data: fetchUnity } = fetchRes[1];
     const { data: fetchCompany } = fetchRes[2];
 
-    const user = fetchUser.map(
+    const user: FetchUsersProps[] = fetchUser.map(
       ({
         id: userID,
         name: userName,
@@ -114,7 +114,7 @@ const fetchUnits = async (): Promise<FetchUnitsProps[]> => {
     const { data: fetchUnity } = fetchRes[0];
     const { data: fetchCompany } = fetchRes[1];
 
-    const unity = fetchUnity.map(
+    const unity: FetchUnitsProps[] = fetchUnity.map(
       ({ id: unityID, name: unityName, companyId: unityCompanyID }) => {
         const { name: company } = fetchCompany
           .filter(({ id: companyID }) => unityCompanyID === companyID)
