@@ -3,7 +3,7 @@ export type FetchAssetsProps = {
   id: number;
   sensors: string[];
   model: string;
-  status: string;
+  status: 'inAlert' | 'inDowntime' | 'inOperation';
   healthscore: number;
   name: string;
   image: string;

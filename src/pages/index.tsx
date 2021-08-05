@@ -30,7 +30,7 @@ export default function Home(): JSX.Element {
           <main className='content'>
             <div>
               {assetsApiData.map(({ id, status, healthscore, name }) => {
-                const assetInfo = { id, status, healthscore, name };
+                const assetInfo = { status, healthscore, name };
 
                 return <CardDetail key={id} assetInfo={assetInfo} />;
               })}

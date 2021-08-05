@@ -10,6 +10,8 @@ import { useAssets } from '@hooks/useAssets';
 
 import { Container } from '@styles/assets-page';
 
+import { assetStatus } from '@utils/assetStatus';
+
 export default function Assets(): JSX.Element {
   const { assetsApiData } = useAssets();
 
@@ -42,71 +44,61 @@ export default function Assets(): JSX.Element {
                   status,
                   unity,
                   company,
-                }) => {
-                  const assetStatus =
-                    status === 'inAlert'
-                      ? 'Em Alerta'
-                      : status === 'inOperation'
-                      ? 'Em Operação'
-                      : 'Em Parada';
+                }) => (
+                  <div key={id} className='asset-card'>
+                    <div>
+                      <Image
+                        src={image}
+                        alt='Foto dos equipamentos das fábricas'
+                        width={1000}
+                        height={1000}
+                      />
 
-                  return (
-                    <div key={id} className='assety-card'>
-                      <div>
-                        <Image
-                          src={image}
-                          alt='Foto dos equipamentos das fábricas'
-                          width={1000}
-                          height={1000}
-                        />
+                      <h3>{name || 'Nome'}</h3>
 
-                        <h3>{name || 'Nome'}</h3>
-
-                        <ul>
-                          <li>
-                            <p>Saúde em: {healthscore}%</p>
-                          </li>
-                          <li>
-                            <p>
-                              Total de Coletas Uptime(Ligada):{' '}
-                              {totalCollectsUptime}
-                            </p>
-                          </li>
-                          <li>
-                            <p>
-                              Total de Horas de Coletas Uptime(Ligada):{' '}
-                              {totalUptime}
-                            </p>
-                          </li>
-                          <li>
-                            <p>
-                              Data da Última Coleta Uptime(Ligada):{' '}
-                              {lastUptimeAt}
-                            </p>
-                          </li>
-                          <li>
-                            <p>Modelo: {model}</p>
-                          </li>
-                          <li>
-                            <p>Sensor: {sensors}</p>
-                          </li>
-                          <li>
-                            <p>Temperatura Máxima em Celsius: {maxTemp}</p>
-                          </li>
-                          <li>
-                            <p>Estado atual: {assetStatus}</p>
-                          </li>
-                          <li>
-                            <p>Unidade: {unity}</p>
-                          </li>
-                          <li>
-                            <p>Empresa: {company}</p>
-                          </li>
-                        </ul>
-                      </div>
+                      <ul>
+                        <li>
+                          <p>Saúde em: {healthscore}%</p>
+                        </li>
+                        <li>
+                          <p>
+                            Total de Coletas Uptime(Ligada):{' '}
+                            {totalCollectsUptime}
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            Total de Horas de Coletas Uptime(Ligada):{' '}
+                            {totalUptime}
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            Data da Última Coleta Uptime(Ligada): {lastUptimeAt}
+                          </p>
+                        </li>
+                        <li>
+                          <p>Modelo: {model}</p>
+                        </li>
+                        <li>
+                          <p>Sensor: {sensors}</p>
+                        </li>
+                        <li>
+                          <p>Temperatura Máxima em Celsius: {maxTemp}</p>
+                        </li>
+                        <li>
+                          <p>Estado atual: {assetStatus(status)}</p>
+                        </li>
+                        <li>
+                          <p>Unidade: {unity}</p>
+                        </li>
+                        <li>
+                          <p>Empresa: {company}</p>
+                        </li>
+                      </ul>
                     </div>
-                  );
-                },
+                  </div>
+                ),
               )}
             </div>
           </main>

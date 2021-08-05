@@ -6,7 +6,7 @@ export const Container = styled.div`
     gap: 1.875rem;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 
-    .assety-card {
+    .asset-card {
       padding: 1rem;
       border-radius: 0.625rem;
       border: 1px solid var(--gray_4D4);
