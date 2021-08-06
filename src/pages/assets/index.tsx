@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { parseJSON } from 'date-fns';
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -44,61 +45,60 @@ export default function Assets(): JSX.Element {
                   status,
                   unity,
                   company,
-                }) => (
-                  <div key={id} className='asset-card'>
-                    <div>
-                      <Image
-                        src={image}
-                        alt='Foto dos equipamentos das fábricas'
-                        width={1000}
-                        height={1000}
-                      />
+                }) => {
+                  const day = parseJSON(lastUptimeAt).getDate();
+                  const month = parseJSON(lastUptimeAt).getMonth() + 1;
+                  const year = parseJSON(lastUptimeAt).getFullYear();
+                  const date = `${day}/${month}/${year}`;
 
-                      <h3>{name || 'Nome'}</h3>
+                  return (
+                    <div key={id} className='asset-card'>
+                      <div>
+                        <Image
+                          src={image}
+                          alt='Foto dos equipamentos das fábricas'
+                          width={1000}
+                          height={1000}
+                        />
 
-                      <ul>
-                        <li>
-                          <p>Saúde em: {healthscore}%</p>
-                        </li>
-                        <li>
-                          <p>
-                            Total de Coletas Uptime(Ligada):{' '}
-                            {totalCollectsUptime}
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Total de Horas de Coletas Uptime(Ligada):{' '}
-                            {totalUptime}
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            Data da Última Coleta Uptime(Ligada): {lastUptimeAt}
-                          </p>
-                        </li>
-                        <li>
-                          <p>Modelo: {model}</p>
-                        </li>
-                        <li>
-                          <p>Sensor: {sensors}</p>
-                        </li>
-                        <li>
-                          <p>Temperatura Máxima em Celsius: {maxTemp}</p>
-                        </li>
-                        <li>
-                          <p>Estado atual: {assetStatus(status)}</p>
-                        </li>
-                        <li>
-                          <p>Unidade: {unity}</p>
-                        </li>
-                        <li>
-                          <p>Empresa: {company}</p>
-                        </li>
-                      </ul>
+                        <h3>{name || 'Nome'}</h3>
+
+                        <ul>
+                          <li>
+                            <p>Saúde em: {healthscore}%</p>
+                          </li>
+                          <li>
+                            <p>Total de coletas: {totalCollectsUptime}</p>
+                          </li>
+                          <li>
+                            <p>Total de horas de coletas: {totalUptime}</p>
+                          </li>
+                          <li>
+                            <p>Data da última coleta: {date}</p>
+                          </li>
+                          <li>
+                            <p>Modelo: {model}</p>
+                          </li>
+                          <li>
+                            <p>Sensor: {sensors}</p>
+                          </li>
+                          <li>
+                            <p>Temperatura máxima: {maxTemp}°c</p>
+                          </li>
+                          <li>
+                            <p>Estado atual: {assetStatus(status)}</p>
+                          </li>
+                          <li>
+                            <p>Unidade: {unity}</p>
+                          </li>
+                          <li>
+                            <p>Empresa: {company}</p>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                ),
+                  );
+                },
               )}
             </div>
           </main>
