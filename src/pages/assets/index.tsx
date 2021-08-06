@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { parseJSON } from 'date-fns';
+import moment from 'moment';
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -46,6 +47,7 @@ export default function Assets(): JSX.Element {
                   unity,
                   company,
                 }) => {
+                  const hour = moment().hour(totalUptime).hour();
                   const day = parseJSON(lastUptimeAt).getDate();
                   const month = parseJSON(lastUptimeAt).getMonth() + 1;
                   const year = parseJSON(lastUptimeAt).getFullYear();
@@ -71,7 +73,7 @@ export default function Assets(): JSX.Element {
                             <p>Total de coletas: {totalCollectsUptime}</p>
                           </li>
                           <li>
-                            <p>Total de horas de coletas: {totalUptime}</p>
+                            <p>Total de horas de coletas: {hour}</p>
                           </li>
                           <li>
                             <p>Data da última coleta: {date}</p>
