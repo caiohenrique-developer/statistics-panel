@@ -11,6 +11,7 @@ import { Menu } from '@components/Menu';
 
 import { useAssets } from '@hooks/useAssets';
 
+import { HighchartsGraph } from '@styles/highcharts-graph';
 import { Container } from '@styles/home-page';
 
 import { highchartsOptions } from '@utils/highchartsOptions';
@@ -35,6 +36,13 @@ export default function Home(): JSX.Element {
           <Header pageTitle='Estatísticas' />
 
           <main className='content'>
+            <HighchartsGraph>
+              <HighchartsReact
+                highcharts={Highcharts}
+                options={barGraphOption}
+              />
+            </HighchartsGraph>
+
             <div>
               {assetsApiData.map(({ id, status, healthscore, name }) => {
                 const assetInfo = { status, healthscore, name };
@@ -42,8 +50,6 @@ export default function Home(): JSX.Element {
                 return <CardDetail key={id} assetInfo={assetInfo} />;
               })}
             </div>
-
-            <HighchartsReact highcharts={Highcharts} options={barGraphOption} />
           </main>
         </section>
       </main>

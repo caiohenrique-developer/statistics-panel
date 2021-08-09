@@ -11,13 +11,13 @@ export const highchartsOptions = (
   return {
     chart: {
       type: 'column',
-      // backgroundColor: {
-      //   linearGradient: [0, 0, 500, 500],
-      //   stops: [
-      //     [0, '#212427'],
-      //     [1, '#282C31'],
-      //   ],
-      // },
+      backgroundColor: {
+        linearGradient: [0, 0, 500, 500],
+        stops: [
+          [0, '#212427'],
+          [1, '#282C31'],
+        ],
+      },
     },
     title: {
       text: 'Status dos ativos',
