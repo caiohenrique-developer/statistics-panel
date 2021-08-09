@@ -2,6 +2,9 @@ import React from 'react';
 
 import Head from 'next/head';
 
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
+
 import { CardDetail } from '@components/CardDetail';
 import { Header } from '@components/Header';
 import { Menu } from '@components/Menu';
@@ -10,8 +13,12 @@ import { useAssets } from '@hooks/useAssets';
 
 import { Container } from '@styles/home-page';
 
+import { highchartsOptions } from '@utils/highchartsOptions';
+
 export default function Home(): JSX.Element {
   const { assetsApiData } = useAssets();
+
+  const barGraphOption = highchartsOptions(assetsApiData);
 
   return (
     <Container>
@@ -36,15 +43,7 @@ export default function Home(): JSX.Element {
               })}
             </div>
 
-            <div className='card-detail-graph'>
-              <p>Gráfico dos status</p>
-
-              <p>
-                <span>assetStatus</span>
-
-                <span>healthscore %</span>
-              </p>
-            </div>
+            <HighchartsReact highcharts={Highcharts} options={barGraphOption} />
           </main>
         </section>
       </main>

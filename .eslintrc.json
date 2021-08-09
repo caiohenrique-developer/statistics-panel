@@ -57,13 +57,14 @@
         "newlinesBetween": "always",
         "groups": [
           "/^react/",
-          "/^@api/",
+          "/^next/",
           "module",
+          "/^@api/",
           "/^@pages/",
           "/^@components/",
           "/^@hooks/",
-          "/^@styles/",
           "/^@assets/",
+          "/^@styles/",
           "/^@utils/",
           ["parent", "sibling", "index"]
         ],
