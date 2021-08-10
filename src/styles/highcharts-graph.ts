@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const HighchartsGraph = styled.div`
-  display: flex;
+  display: grid;
+  gap: 1.875rem;
+  grid-template-columns: 1fr 0.6fr;
 
   > div {
     background: var(--dark_282);
@@ -9,24 +11,24 @@ export const HighchartsGraph = styled.div`
     border-radius: 0.813rem;
     padding: 1.5rem;
 
-    text.highcharts-title {
+    .highcharts-title {
       font-weight: bold;
     }
 
-    tspan.highcharts-text-outline {
+    .highcharts-text-outline {
       display: none;
     }
 
-    g.highcharts-label:not(.highcharts-tooltip) > text,
-    g.highcharts-axis-labels > text,
-    g.highcharts-legend text,
-    text.highcharts-title {
+    .highcharts-title,
+    .highcharts-legend text,
+    .highcharts-axis-labels > text,
+    .highcharts-label:not(.highcharts-tooltip) > text {
       color: var(--ice_CAC) !important;
       fill: var(--ice_CAC) !important;
     }
 
-    div.highcharts-container,
-    div.highcharts-container svg.highcharts-root {
+    .highcharts-root,
+    .highcharts-container {
       width: 100% !important;
       height: 100% !important;
     }

@@ -10,11 +10,11 @@ import { UnitsProvider } from '@hooks/useUnits';
 import { UsersProvider } from '@hooks/useUsers';
 
 import '@styles/responsive.scss';
-import { Container } from '@styles/general-pages';
-import GlobalStyles from '@styles/globals';
-
 import ShapeEllipseBkg from '@assets/icons/bkg-shape-ellipse.svg';
 import ShapeBkg from '@assets/icons/bkg-shape.svg';
+
+import { Container } from '@styles/general-pages';
+import GlobalStyles from '@styles/globals';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   const { pathname: pathUrl } = useRouter();

@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { parseJSON } from 'date-fns';
-import moment from 'moment';
 import Head from 'next/head';
 import Image from 'next/image';
+
+import { parseJSON } from 'date-fns';
+import moment from 'moment';
 
 import { Header } from '@components/Header';
 import { Menu } from '@components/Menu';
