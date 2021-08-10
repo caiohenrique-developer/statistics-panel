@@ -17,8 +17,8 @@ export const HighchartsGraph = styled.div`
       display: none;
     }
 
+    g.highcharts-label:not(.highcharts-tooltip) > text,
     g.highcharts-axis-labels > text,
-    g.highcharts-label > text,
     g.highcharts-legend text,
     text.highcharts-title {
       color: var(--ice_CAC) !important;

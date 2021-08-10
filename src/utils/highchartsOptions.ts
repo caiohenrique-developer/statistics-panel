@@ -3,9 +3,10 @@ import { FetchAssetsProps } from '@utils/types/api';
 export const highchartsOptions = (
   assetsApiData: FetchAssetsProps[],
 ): Record<string, unknown> => {
-  const assetInfo = assetsApiData.map(({ name, healthscore }) => ({
+  const assetInfo = assetsApiData.map(({ name, healthscore, status }) => ({
     name,
     y: healthscore,
+    status,
   }));
 
   const barGraphOption = {
