@@ -28,6 +28,7 @@ export const HighchartsGraph = styled.div`
     div.highcharts-container,
     div.highcharts-container svg.highcharts-root {
       width: 100% !important;
+      height: 100% !important;
     }
   }
 `;
