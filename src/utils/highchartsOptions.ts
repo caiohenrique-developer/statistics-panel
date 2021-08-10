@@ -1,13 +1,34 @@
+import { assetStatus } from '@utils/assetStatus';
 import { FetchAssetsProps } from '@utils/types/api';
 
 export const highchartsOptions = (
   assetsApiData: FetchAssetsProps[],
 ): Record<string, unknown> => {
-  const assetInfo = assetsApiData.map(({ name, healthscore, status }) => ({
+  const assetInfo = assetsApiData.map(({ name, healthscore }) => ({
     name,
     y: healthscore,
-    status,
   }));
+
+  const inAlertTotal = assetsApiData.filter(
+    ({ status: statusType }) => statusType === 'inAlert',
+  ).length;
+  const inOperationTotal = assetsApiData.filter(
+    ({ status: statusType }) => statusType === 'inOperation',
+  ).length;
+  const inDowntimeTotal = assetsApiData.filter(
+    ({ status: statusType }) => statusType === 'inDowntime',
+  ).length;
+
+  const inAlert = ['Em Alerta', inAlertTotal];
+  const inOperation = ['Em Operação', inOperationTotal];
+  const inDowntime = ['Em Parada', inDowntimeTotal];
+
+  const geral = [inAlert, inOperation, inDowntime];
+
+  console.log(geral);
+
+  // '"inAlert" | "inOperation" | "inDowntime"'
+  // '"Em Alerta" | "Em Operação" | "Em Parada"'
 
   const barGraphOption = {
     chart: {
@@ -66,22 +87,22 @@ export const highchartsOptions = (
     title: {
       text: 'Visão geral dos estados',
     },
-    xAxis: {
-      categories: [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
-        'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dec',
-      ],
-    },
+    // xAxis: {
+    //   categories: [
+    //     'Jan',
+    //     'Feb',
+    //     'Mar',
+    //     'Apr',
+    //     'May',
+    //     'Jun',
+    //     'Jul',
+    //     'Aug',
+    //     'Sep',
+    //     'Oct',
+    //     'Nov',
+    //     'Dec',
+    //   ],
+    // },
     series: [
       {
         type: 'pie',
