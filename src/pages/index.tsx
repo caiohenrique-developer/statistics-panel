@@ -19,7 +19,7 @@ import { highchartsOptions } from '@utils/highchartsOptions';
 export default function Home(): JSX.Element {
   const { assetsApiData } = useAssets();
 
-  const barGraphOption = highchartsOptions(assetsApiData);
+  const { barGraphOption, discGraphOption } = highchartsOptions(assetsApiData);
 
   return (
     <Container>
@@ -40,6 +40,10 @@ export default function Home(): JSX.Element {
               <HighchartsReact
                 highcharts={Highcharts}
                 options={barGraphOption}
+              />
+              <HighchartsReact
+                highcharts={Highcharts}
+                options={discGraphOption}
               />
             </HighchartsGraph>
 

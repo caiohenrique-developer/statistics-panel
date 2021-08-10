@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const HighchartsGraph = styled.div`
+  display: flex;
+
   > div {
     background: var(--dark_282);
     border: 1px solid var(--gray_4D4);
@@ -17,9 +19,15 @@ export const HighchartsGraph = styled.div`
 
     g.highcharts-axis-labels > text,
     g.highcharts-label > text,
+    g.highcharts-legend text,
     text.highcharts-title {
       color: var(--ice_CAC) !important;
       fill: var(--ice_CAC) !important;
+    }
+
+    div.highcharts-container,
+    div.highcharts-container svg.highcharts-root {
+      width: 100% !important;
     }
   }
 `;

@@ -8,22 +8,16 @@ export const highchartsOptions = (
     y: healthscore,
   }));
 
-  return {
+  const barGraphOption = {
     chart: {
       type: 'column',
-      backgroundColor: {
-        linearGradient: [0, 0, 500, 500],
-        stops: [
-          [0, '#212427'],
-          [1, '#282C31'],
-        ],
-      },
+      backgroundColor: '#282C31',
     },
     title: {
-      text: 'Status dos ativos',
+      text: 'Statísticas dos ativos',
     },
     subtitle: {
-      text: 'Passe o mouse por cima das estatísticas',
+      text: 'Estado atual',
     },
     accessibility: {
       announceNewData: {
@@ -63,4 +57,49 @@ export const highchartsOptions = (
       },
     ],
   };
+
+  const discGraphOption = {
+    chart: {
+      backgroundColor: '#282C31',
+    },
+    title: {
+      text: 'Visão geral dos estados',
+    },
+    xAxis: {
+      categories: [
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec',
+      ],
+    },
+    series: [
+      {
+        type: 'pie',
+        allowPointSelect: true,
+        keys: ['name', 'y', 'selected', 'sliced'],
+        data: [
+          ['Apples', 29.9, false],
+          ['Pears', 71.5, false],
+          ['Oranges', 106.4, false],
+          ['Plums', 129.2, false],
+          ['Bananas', 144.0, false],
+          ['Peaches', 176.0, false],
+          ['Prunes', 135.6, true, true],
+          ['Avocados', 148.5, false],
+        ],
+        showInLegend: true,
+      },
+    ],
+  };
+
+  return { barGraphOption, discGraphOption };
 };
