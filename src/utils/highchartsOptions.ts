@@ -1,10 +1,9 @@
-import { assetStatus } from '@utils/assetStatus';
 import { FetchAssetsProps } from '@utils/types/api';
 
 export const highchartsOptions = (
   assetsApiData: FetchAssetsProps[],
 ): Record<string, unknown> => {
-  const assetInfo = assetsApiData.map(({ name, healthscore }) => ({
+  const barGraphData = assetsApiData.map(({ name, healthscore }) => ({
     name,
     y: healthscore,
   }));
@@ -19,16 +18,11 @@ export const highchartsOptions = (
     ({ status: statusType }) => statusType === 'inDowntime',
   ).length;
 
-  const inAlert = ['Em Alerta', inAlertTotal];
-  const inOperation = ['Em Operação', inOperationTotal];
-  const inDowntime = ['Em Parada', inDowntimeTotal];
-
-  const geral = [inAlert, inOperation, inDowntime];
-
-  console.log(geral);
-
-  // '"inAlert" | "inOperation" | "inDowntime"'
-  // '"Em Alerta" | "Em Operação" | "Em Parada"'
+  const discGraphData = [
+    ['Em Alerta', inAlertTotal],
+    ['Em Operação', inOperationTotal],
+    ['Em Parada', inDowntimeTotal, true, true],
+  ];
 
   const barGraphOption = {
     chart: {
@@ -75,7 +69,7 @@ export const highchartsOptions = (
       {
         name: 'Ativo',
         colorByPoint: true,
-        data: assetInfo,
+        data: barGraphData,
       },
     ],
   };
@@ -87,37 +81,12 @@ export const highchartsOptions = (
     title: {
       text: 'Visão geral dos estados',
     },
-    // xAxis: {
-    //   categories: [
-    //     'Jan',
-    //     'Feb',
-    //     'Mar',
-    //     'Apr',
-    //     'May',
-    //     'Jun',
-    //     'Jul',
-    //     'Aug',
-    //     'Sep',
-    //     'Oct',
-    //     'Nov',
-    //     'Dec',
-    //   ],
-    // },
     series: [
       {
         type: 'pie',
         allowPointSelect: true,
         keys: ['name', 'y', 'selected', 'sliced'],
-        data: [
-          ['Apples', 29.9, false],
-          ['Pears', 71.5, false],
-          ['Oranges', 106.4, false],
-          ['Plums', 129.2, false],
-          ['Bananas', 144.0, false],
-          ['Peaches', 176.0, false],
-          ['Prunes', 135.6, true, true],
-          ['Avocados', 148.5, false],
-        ],
+        data: discGraphData,
         showInLegend: true,
       },
     ],
