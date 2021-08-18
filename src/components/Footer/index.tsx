@@ -3,10 +3,13 @@ import React from 'react';
 import { Container } from './styles';
 
 export const Footer = (): JSX.Element => {
+  const currentYear = new Date().getFullYear();
+  const year = currentYear > 2021 ? `2021 - ${currentYear}` : currentYear;
+
   return (
     <Container>
       <p>
-        Copyright © 2021 Statistics Panel, done with ☕ by{' '}
+        Copyright &copy; {year} Statistics Panel, done with ☕ by{' '}
         <a
           target='_blank'
           rel='noreferrer'
