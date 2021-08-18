@@ -6,6 +6,7 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
 import { CardDetail } from '@components/CardDetail';
+import { Footer } from '@components/Footer';
 import { Header } from '@components/Header';
 import { Menu } from '@components/Menu';
 
@@ -55,6 +56,8 @@ export default function Home(): JSX.Element {
               })}
             </div>
           </main>
+
+          <Footer />
         </section>
       </main>
     </Container>
