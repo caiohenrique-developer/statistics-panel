@@ -7,19 +7,19 @@ export const Container = styled.main`
     .banner {
       position: relative;
 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       > div {
         filter: brightness(0.5) opacity(0.2);
       }
 
       h2 {
         position: absolute;
-        top: 50%;
-        bottom: 50%;
-        left: 50%;
-        transform: translate(-50%);
 
         font-size: 1.75rem;
-        line-height: 0rem;
+        text-align: center;
       }
     }
 
