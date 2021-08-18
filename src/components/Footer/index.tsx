@@ -7,7 +7,7 @@ export const Footer = (): JSX.Element => {
   const year = currentYear > 2021 ? `2021 - ${currentYear}` : currentYear;
 
   return (
-    <Container>
+    <Container className='footer'>
       <p>
         Copyright &copy; {year} Statistics Panel, done with ☕ by{' '}
         <a

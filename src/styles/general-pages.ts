@@ -20,11 +20,13 @@ export const Container = styled.div`
     display: flex;
 
     section:last-of-type {
+      position: relative;
+
       width: 100%;
-      padding: 3rem;
+      padding: 3rem 3rem 0;
 
       .content {
-        max-height: 90%;
+        max-height: 80%;
         overflow-y: overlay;
 
         > div {
