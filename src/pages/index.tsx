@@ -5,10 +5,9 @@ import Head from 'next/head';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
+import AppContainer from '@components/AppContainer';
 import { CardDetail } from '@components/CardDetail';
-import { Footer } from '@components/Footer';
 import { Header } from '@components/Header';
-import { Menu } from '@components/Menu';
 
 import { useAssets } from '@hooks/useAssets';
 
@@ -23,43 +22,27 @@ export default function Home(): JSX.Element {
   const { barGraphOption, discGraphOption } = highchartsOptions(assetsApiData);
 
   return (
-    <Container>
+    <AppContainer>
       <Head>
         <title>Home | Statistics Panel</title>
       </Head>
 
-      <main>
-        <section>
-          <Menu />
-        </section>
+      <Header pageTitle='Estatísticas' />
 
-        <section>
-          <Header pageTitle='Estatísticas' />
+      <Container className='content'>
+        <HighchartsGraph>
+          <HighchartsReact highcharts={Highcharts} options={barGraphOption} />
+          <HighchartsReact highcharts={Highcharts} options={discGraphOption} />
+        </HighchartsGraph>
 
-          <main className='content'>
-            <HighchartsGraph>
-              <HighchartsReact
-                highcharts={Highcharts}
-                options={barGraphOption}
-              />
-              <HighchartsReact
-                highcharts={Highcharts}
-                options={discGraphOption}
-              />
-            </HighchartsGraph>
+        <div>
+          {assetsApiData.map(({ id, status, healthscore, name }) => {
+            const assetInfo = { status, healthscore, name };
 
-            <div>
-              {assetsApiData.map(({ id, status, healthscore, name }) => {
-                const assetInfo = { status, healthscore, name };
-
-                return <CardDetail key={id} assetInfo={assetInfo} />;
-              })}
-            </div>
-          </main>
-
-          <Footer />
-        </section>
-      </main>
-    </Container>
+            return <CardDetail key={id} assetInfo={assetInfo} />;
+          })}
+        </div>
+      </Container>
+    </AppContainer>
   );
 }

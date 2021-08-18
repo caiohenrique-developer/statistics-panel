@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  .content > div {
+export const Container = styled.main`
+  &.content > div {
     display: grid;
     gap: 1.875rem;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));

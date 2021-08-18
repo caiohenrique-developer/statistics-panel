@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  .content > div {
+export const Container = styled.main`
+  &.content > div {
     margin-right: 0 !important;
 
     .banner {

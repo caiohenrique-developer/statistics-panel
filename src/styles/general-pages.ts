@@ -19,32 +19,30 @@ export const Container = styled.div`
   > div > main {
     display: flex;
 
-    section {
-      &:last-of-type {
-        width: 100%;
-        padding: 3rem;
+    section:last-of-type {
+      width: 100%;
+      padding: 3rem;
 
-        .content {
-          max-height: 90%;
-          overflow-y: overlay;
+      .content {
+        max-height: 90%;
+        overflow-y: overlay;
 
-          > div {
-            margin-right: 1.5rem;
-          }
+        > div {
+          margin-right: 1.5rem;
+        }
 
-          &::-webkit-scrollbar {
-            width: 8px;
-            height: 0;
-          }
+        &::-webkit-scrollbar {
+          width: 8px;
+          height: 0;
+        }
 
-          &::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-          }
+        &::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
 
-          &::-webkit-scrollbar-thumb {
-            background: var(--dark_282);
-            border-radius: 5px;
-          }
+        &::-webkit-scrollbar-thumb {
+          background: var(--dark_282);
+          border-radius: 5px;
         }
       }
     }
