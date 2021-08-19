@@ -1,38 +1,38 @@
 module.exports = {
   types: [
     // My custom types
-    { value: ':sparkles: [ FEAT ]', name: '[ FEAT ]: A new feature' },
-    { value: ':tada: [ FEAT ]', name: '[ INITIAL ]: Initial commit' },
-    { value: ':x: [ FIX ]', name: '[ FIX ]: A bug fix' },
-    { value: ':memo: [ DOC ]', name: '[ DOC ]: Documentation only changes' },
+    { value: '✨ [feat]', name: '✨ [feat]: A new feature' },
+    { value: '🎉 [feat]', name: '🎉 [initial]: Initial commit' },
+    { value: '✅ [fix]', name: '✅ [fix]: A bug fix' },
+    { value: '📝 [doc]', name: '📝 [doc]: Documentation only changes' },
     {
-      value: ':art: [ STYLE ]',
-      name: '[ STYLE ]: Changes that do not affect the meaning of the code\n (white-space, formatting, missing semi-colons, etc)',
+      value: '🎨 [style]',
+      name: '🎨 [style]: Changes that do not affect the meaning of the code\n (white-space, formatting, missing semi-colons, etc)',
     },
     {
-      value: ':recycle: [ REFACTOR ]',
-      name: '[ REFACTOR ]: A code change that neither fixes a bug nor adds a feature',
+      value: '♻️ [refactor]',
+      name: '♻️⠀⠀[refactor]: A code change that neither fixes a bug nor adds a feature',
     },
     {
-      value: ':rocket: [ PERF ]',
-      name: '[ PERF ]: A code change that improves performance',
+      value: '🛸 [perf]',
+      name: '🛸 [perf]: A code change that improves performance',
     },
-    { value: ':rotating_light: [ TEST ]', name: '[ TEST ]: Adding missing tests' },
+    { value: '🚨 [test]', name: '🚨 [test]: Adding missing tests' },
     {
-      value: ':hammer: [ CHORE ]',
+      value: '🔨 [chore]',
       name:
-        '[ CHORE ]: Changes to the build process or auxiliary tools\n and libraries such as documentation generation',
+        '🔨 [chore]: Changes to the build process or auxiliary tools\n and libraries such as documentation generation',
     },
-    { value: ':back: [ REVERT ]', name: '[ REVERT ]: Revert to a commit' },
-    { value: ':chart_with_upwards_trend: [ WIP ]', name: '[ WIP ]: Work in progress' },
+    { value: '🔙 [revert]', name: '🔙 [revert]: Revert to a commit' },
+    { value: '📈 [wip]', name: '📈 [wip]: Work in progress' },
 
     // To create release tags
-    { value: 'perf', name: '{ MAJOR - TAG }: Add a release tag of perf type' },
-    { value: 'fix', name: '{ PATCH - TAG }: Add a release tag of fix type' },
-    { value: 'feat', name: '{ MINOR - TAG }: Add a release tag of feat type' },
+    { value: '🔖 [perf]', name: '🔖 { Major }: Add a release tag of perf type' },
+    { value: '🔖 [fix]', name: '🔖 { Patch }: Add a release tag of fix type' },
+    { value: '🔖 [feat]', name: '🔖 { Minor }: Add a release tag of feat type' },
   ],
 
-  scopes: [{ name: ':bookmark:' }, { name: 'Release' }, { name: 'Test' }, { name: 'accounts' }, { name: 'admin' }, { name: 'exampleScope' }, { name: 'changeMe' }],
+  scopes: [{ name: '🔖' }, { name: 'release' }, { name: 'test' }, { name: 'accounts' }, { name: 'admin' }, { name: 'exampleScope' }, { name: 'changeMe' }],
 
   allowTicketNumber: false,
   isTicketNumberRequired: false,
