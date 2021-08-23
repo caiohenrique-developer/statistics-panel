@@ -92,6 +92,8 @@
 In order to use and test this project locally, you should've already set up the development environment. <br>
 _Or go to [**statistics-panel.vercel.app**](https://statistics-panel.vercel.app/) to see the project in a production environment._
 
+[![Deploy with Vercel](https://vercel.com/button)](https://statistics-panel.vercel.app/)
+
 ## [🔝](#top) How To Use :grey_question:
 
 To clone and run this application locally, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [Yarn v1.13][yarn] or higher installed on your computer.
