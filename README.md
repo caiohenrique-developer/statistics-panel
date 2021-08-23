@@ -28,9 +28,8 @@
 
 ## [🔝](#top) Roadmap :gem:
 
-<img align="right" src="https://img.shields.io/badge/Project%20Status%20-🚧%20(WIP)%20🚧-2C8EBB?style=flat&logo=statuspage&logoColor=white&color=yellowgreen"/>
-
-- [ ] ...
+- [ ] List asset statistics using a graphics library
+- [ ] Users, Assets, Companies/Units responsive pages
 - Any suggestion?
   - <a href="#-contact-me-phone">Contact me!</a>
 
