@@ -28,8 +28,8 @@
 
 ## [🔝](#top) Roadmap :gem:
 
-- [ ] List asset statistics using a graphics library
-- [ ] Users, Assets, Companies/Units responsive pages
+- [x] List asset statistics using a graphics library
+- [x] Users, Assets, Companies/Units responsive pages
 - Any suggestion?
   - <a href="#-contact-me-phone">Contact me!</a>
 
@@ -46,43 +46,43 @@
     <td><a href="https://github.com/conventional-changelog/commitlint">Commitlint</a></td>
   </tr>
   <tr align="center">
-    <td><a href="https://vercel.com/solutions/nextjs">Next.js</a></td>
+    <td><a href="https://date-fns.org/">Date-fns</a></td>
     <td><a href="https://github.com/commitizen/cz-cli">Commitizen</a></td>
   </tr>
   <tr align="center">
-    <td><a href="https://polished.js.org/">Polished</a></td>
+    <td><a href="https://www.highcharts.com/">Highcharts</a></td>
     <td><a href="https://github.com/leoforfree/cz-customizable">CZ-customizable</a></td>
   </tr>
   <tr align="center">
-    <td><a href="https://reactjs.org/">React.js</a></td>
+    <td><a href="https://github.com/highcharts/highcharts-react">Highcharts-react-official</a></td>
     <td><a href="https://editorconfig.org/">EditorConfig</a></td>
   </tr>
   <tr align="center">
-    <td><a href="https://github.com/contra/react-responsive">React-responsive</a></td>
+    <td><a href="https://momentjs.com/">Moment</a></td>
     <td><a href="https://eslint.org/">ESLint</a></td>
   </tr>
   <tr align="center">
-    <td><a href="https://styled-components.com/">Styled-components</a></td>
+    <td><a href="https://vercel.com/solutions/nextjs">Next.js</a></td>
     <td><a href="https://github.com/Tibfib/eslint-plugin-import-helpers">Eslint-plugin-import-helpers</a></td>
   </tr>
   <tr align="center">
-    <td><a href="https://vercel.com/">Vercel</a></td>
+    <td><a href="https://polished.js.org/">Polished</a></td>
     <td><a href="https://github.com/typicode/husky">Husky</a></td>
   </tr>
   <tr align="center">
-    <td><a href="#"></a></td>
+    <td><a href="https://reactjs.org/">React.js</a></td>
     <td><a href="https://prettier.io/">Prettier</a></td>
   </tr>
   <tr align="center">
-    <td><a href="#"></a></td>
+    <td><a href="https://github.com/contra/react-responsive">React-responsive</a></td>
     <td><a href="https://github.com/sass/dart-sass">Sass</a></td>
   </tr>
   <tr align="center">
-    <td><a href="#"></a></td>
+    <td><a href="https://styled-components.com/">Styled-components</a></td>
     <td><a href="https://react-svgr.com/">SVGR</a></td>
   </tr>
   <tr align="center">
-    <td><a href="#"></a></td>
+    <td><a href="https://vercel.com/">Vercel</a></td>
     <td><a href="https://www.typescriptlang.org/">TypeScript</a></td>
   </tr>
 </table>
