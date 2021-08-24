@@ -135,10 +135,6 @@ $ yarn dev
 
   <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/caiohenrique-developer/statistics-panel">
 
-  <a href="https://www.codacy.com/app/caiohenrique-developer/statistics-panel?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=caiohenrique-developer/statistics-panel&amp;utm_campaign=Badge_Grade">
-    <img alt="Codacy Grade" src="https://img.shields.io/codacy/grade/4f87fc059ec846118f2ef2950200b13a.svg">
-  </a>
-
   <a href="https://github.com/caiohenrique-developer/statistics-panel/commits/master">
     <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/caiohenrique-developer/statistics-panel">
   </a>
