@@ -9,7 +9,8 @@
 <h5 align="center">📊 Industry statistics panel</h5>
 
 <p align="center">
-  <a href="#-roadmap-gem">💎 Roadmap</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#gem">💎 Roadmap</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <!-- <a href="#-roadmap-gem">💎 Roadmap</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp; -->
   <a href="#-techs-flying_saucer">🛸 Techs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#-prerequisites-warning">⚠️ Prerequisites</a>&nbsp;&nbsp;&nbsp;|&nbsp;
   <a href="#-how-to-use-grey_question">❔ How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -26,7 +27,11 @@
 
 <br>
 
-## [🔝](#top) Roadmap :gem:
+<!-- ## [🔝](#top) Roadmap :gem: -->
+
+## <a name="gem"></a>
+
+<!-- ## [🔝](#top) Roadmap :gem: -->
 
 - [x] List asset statistics using a graphics library
 - [x] Users, Assets, Companies/Units responsive pages
