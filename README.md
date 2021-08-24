@@ -1,4 +1,6 @@
-### <a name="top"></a>
+#### <a name="top"></a>
+
+<br><br>
 
 <h1 align="center">
   <a href="https://statistics-panel.vercel.app/" target="_blank">
@@ -29,13 +31,11 @@
 
 <!-- ## [🔝](#top) Roadmap :gem: -->
 
-<a href="mailto:caiohenrique.developer@gmail.com">
-  <img align="right" alt="Gmail" src="&#128512;" />
-</a>
+#### <a name="gem"></a> <br>
 
-## 💎 Roadmap <a align="right" name="gem" href="top">🔝 <img align="right" alt="Whatsapp" src="https://img.shields.io/badge/(11)%2094390%202438-25D366?style=social&logo=whatsapp&logoColor=black" />🔝</a> <span align="center">&#128512;</span>
+## 💎 Roadmap <a href="#top"><img align="right" width="15" src="./src/assets/icons/icon-arrow-up.svg" /></a>
 
-<p>&#128512;</p>
+## 💎 Roadmap <a href="#top"><img align="right" width="25" src="./src/assets/icons/back-to-top.png" /></a>
 
 <!-- ## [🔝](#top) Roadmap :gem: -->
 
