@@ -29,7 +29,13 @@
 
 <!-- ## [🔝](#top) Roadmap :gem: -->
 
-## <a name="gem"></a>
+<a href="mailto:caiohenrique.developer@gmail.com">
+  <img align="right" alt="Gmail" src="&#128512;" />
+</a>
+
+## 💎 Roadmap <a align="right" name="gem" href="top">🔝 <img align="right" alt="Whatsapp" src="https://img.shields.io/badge/(11)%2094390%202438-25D366?style=social&logo=whatsapp&logoColor=black" />🔝</a> <span align="center">&#128512;</span>
+
+<p>&#128512;</p>
 
 <!-- ## [🔝](#top) Roadmap :gem: -->
 
