@@ -18,7 +18,7 @@
   <a href="#phone">☎ Contact Me</a>
 </p>
 
-<h1></h1> <br><br>
+<br><br>
 
 <p align="center">
   <img alt="Statistics Panel image mockup" src="./public/images/mockup.png" width="100%" />
