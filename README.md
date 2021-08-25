@@ -1,6 +1,4 @@
-#### <a name="top"></a>
-
-<br><br>
+#### <a name="top"></a> <br><br>
 
 <h1 align="center">
   <a href="https://statistics-panel.vercel.app/" target="_blank">
