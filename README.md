@@ -1,10 +1,10 @@
 #### <a name="top"></a> <br><br>
 
-<h1 align="center">
+<h5 align="center">
   <a href="https://statistics-panel.vercel.app/" target="_blank">
     <img alt="Statistics Panel logotipo" src="./public/app-logotipo.svg" />
   </a>
-</h1>
+</h5>
 
 <h5 align="center">📊 Industry statistics panel</h5>
 
@@ -18,7 +18,7 @@
   <a href="#phone">☎ Contact Me</a>
 </p>
 
-<br><br>
+<h1></h1> <br><br>
 
 <p align="center">
   <img alt="Statistics Panel image mockup" src="./public/images/mockup.png" width="100%" />
