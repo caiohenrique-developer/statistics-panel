@@ -28,7 +28,7 @@
 
 #### <a name="gem"></a> <br>
 
-## 💎 Roadmap <a href="#top"><img align="right" width="25" src="./src/assets/icons/back-to-top.png" /></a>
+## 💎 Roadmap <a href="#top"><img align="right" width="20" src="./src/assets/icons/icon-arrow-up.svg" /></a>
 
 - [x] List asset statistics using a graphics library
 - [x] Users, Assets, Companies/Units responsive pages
@@ -37,7 +37,7 @@
 
 #### <a name="flying_saucer"></a> <br>
 
-## 🛸 Techs <a href="#top"><img align="right" width="25" src="./src/assets/icons/back-to-top.png" /></a>
+## 🛸 Techs <a href="#top"><img align="right" width="20" src="./src/assets/icons/icon-arrow-up.svg" /></a>
 
 <table>
   <tr align="center">
@@ -93,7 +93,7 @@
 
 #### <a name="warning"></a> <br>
 
-## ⚠️ Prerequisites <a href="#top"><img align="right" width="25" src="./src/assets/icons/back-to-top.png" /></a>
+## ⚠️ Prerequisites <a href="#top"><img align="right" width="20" src="./src/assets/icons/icon-arrow-up.svg" /></a>
 
 In order to use and test this project locally, you should've already set up the development environment. <br>
 _Or go to [**statistics-panel.vercel.app**](https://statistics-panel.vercel.app/) to see the project in a production environment._
@@ -102,7 +102,7 @@ _Or go to [**statistics-panel.vercel.app**](https://statistics-panel.vercel.app/
 
 #### <a name="grey_question"></a> <br>
 
-## ❔ How To Use <a href="#top"><img align="right" width="25" src="./src/assets/icons/back-to-top.png" /></a>
+## ❔ How To Use <a href="#top"><img align="right" width="20" src="./src/assets/icons/icon-arrow-up.svg" /></a>
 
 To clone and run this application locally, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [Yarn v1.13][yarn] or higher installed on your computer.
 
@@ -138,7 +138,7 @@ $ yarn dev
 
 #### <a name="bookmark"></a> <br>
 
-## 🔖 Badges <a href="#top"><img align="right" width="25" src="./src/assets/icons/back-to-top.png" /></a>
+## 🔖 Badges <a href="#top"><img align="right" width="20" src="./src/assets/icons/icon-arrow-up.svg" /></a>
 
 <p align="center">
   <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/caiohenrique-developer/statistics-panel">
@@ -178,7 +178,7 @@ $ yarn dev
 
 #### <a name="closed_lock_with_key"></a> <br>
 
-## 🔐 License <a href="#top"><img align="right" width="25" src="./src/assets/icons/back-to-top.png" /></a>
+## 🔐 License <a href="#top"><img align="right" width="20" src="./src/assets/icons/icon-arrow-up.svg" /></a>
 
 Copyright © 2021 Statistics Panel, [MIT](https://github.com/caiohenrique-developer/statistics-panel/blob/master/LICENSE) .
 
@@ -190,7 +190,7 @@ Copyright © 2021 Statistics Panel, [MIT](https://github.com/caiohenrique-develo
 
 #### <a name="phone"></a> <br>
 
-## ☎ Contact Me <a href="#top"><img align="right" width="25" src="./src/assets/icons/back-to-top.png" /></a>
+## ☎ Contact Me <a href="#top"><img align="right" width="20" src="./src/assets/icons/icon-arrow-up.svg" /></a>
 
 <p align="left">
   <img align="left" alt="Profile Avatar" src="./public/professional.png" width="80" />
